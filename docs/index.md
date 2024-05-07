@@ -87,14 +87,19 @@ toc: false
 
 ```js
 
-const roles = FileAttachment("data/combine.json").json();
+const roles = await FileAttachment("data/combine.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
-		label: "Roles",
+		label: "Role",
 		format: (i) => i.label,
 		valueof: (i) => i.reports
 	})
 );
+const year_sel = view(
+	Inputs.select([2019, 2020, 2021, 2022, 2023], {
+		label: "Year"
+	})
+);
 ```
 
-  <div class="card">${ Inputs.table(role_sel) }</div>
+  <div class="card">${ Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {columns: ['label', 'sites', 'grids'], header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'}, format: {'sites': (x) => x.role_year, 'grids': (x) => x.role_year}, sort: 'label'}) }</div>
