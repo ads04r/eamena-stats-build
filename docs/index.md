@@ -87,17 +87,7 @@ toc: false
 
 ```js
 
-function role_values(data)
-{
-	var ret = [];
-	for(let k in data)
-	{
-		ret.push(data[k]);
-	}
-	return ret;
-}
-
-const roles = role_values(await FileAttachment("data/roles.json").json());
+const roles = FileAttachment("data/combine.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
 		label: "Roles",
@@ -107,3 +97,4 @@ const role_sel = view(
 );
 ```
 
+  <div class="card">${ Inputs.table(role_sel) }</div>
