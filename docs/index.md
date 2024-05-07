@@ -102,4 +102,19 @@ const year_sel = view(
 );
 ```
 
+<div class="grid grid-cols-3">
+  <div class="card">
+	<p> Total sites </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_total } </h2>
+  </div>
+  <div class="card">
+	<p> Total grid squares </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role_year } </h2>
+  </div>
+  <div class="card">
+	<p> Bulk uploads </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_bulk } </h2>
+  </div>
+</div>
+
   <div class="card">${ Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {columns: ['label', 'sites', 'grids'], header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'}, format: {'sites': (x) => x.role_year, 'grids': (x) => x.role_year}, sort: 'label'}) }</div>
