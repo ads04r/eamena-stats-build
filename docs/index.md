@@ -102,9 +102,10 @@ const year_sel = view(
 	})
 );
 
-function filename(type, role, year)
+function filename(type, role, year, row)
 {
 	console.log(role)
+	console.log(row)
 	return type + '_' + year + '.html';
 }
 
@@ -129,8 +130,8 @@ function filename(type, role, year)
 	columns: ['label', 'sites', 'grids'],
 	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
 	format: {
-		'label': (x) => htl.html`<em>${ x.label }</em>`,
-		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((d) => d.year === year_sel).flat()[0], year_sel) }">View all</a>`,
-		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((d) => d.year === year_sel).flat()[0], year_sel) }">View all</a>`
+		'label': (x) => htl.html`<em>${ d.label }</em>`,
+		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((d) => d.year === year_sel).flat()[0], year_sel, d) }">View all</a>`,
+		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((d) => d.year === year_sel).flat()[0], year_sel, d) }">View all</a>`
 	},
 	sort: 'label'}) }</div>
