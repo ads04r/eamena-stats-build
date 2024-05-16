@@ -96,7 +96,7 @@ const role_sel = view(
 	})
 );
 const year_sel = view(
-	Inputs.select([2019, 2020, 2021, 2022, 2023], {
+	Inputs.select([2019, 2020, 2021, 2022, 2023, 2024], {
 		label: "Year"
 	})
 );
