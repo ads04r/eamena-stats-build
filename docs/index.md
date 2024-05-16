@@ -118,4 +118,8 @@ const year_sel = view(
   </div>
 </div>
 
-  <div class="card">${ Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {columns: ['label', 'sites', 'grids'], header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'}, format: {'sites': (x) => x.role_year, 'grids': (x) => x.role_year}, sort: 'label'}) }</div>
+  <div class="card">${ Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
+	columns: ['label', 'sites', 'grids'],
+	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
+	format: {'sites': (x) => x.role_year, 'grids': (x) => x.role_year},
+	sort: 'label'}) }</div>
