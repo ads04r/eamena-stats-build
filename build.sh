@@ -10,4 +10,6 @@ mv old-dist/.git dist/
 rm -Rf old-dist
 chmod -R 755 *
 
-git status
+git add .
+git commit -a -m "Auto-commit on build"
+git push -u origin dev
