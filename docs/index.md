@@ -101,6 +101,12 @@ const year_sel = view(
 		label: "Year"
 	})
 );
+
+function filename(type, role, year)
+{
+	return type + '_' + role + '_' + year + '.html';
+}
+
 ```
 
 <div class="grid grid-cols-3">
@@ -121,5 +127,8 @@ const year_sel = view(
   <div class="card">${ Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
 	columns: ['label', 'sites', 'grids'],
 	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
-	format: {'sites': (x) => htl.html`${ x.role_year }&nbsp;<a href="">View all</a>`, 'grids': (x) => x.role_year},
+	format: {
+		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel, year_sel) }">View all</a>`,
+		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel, year_sel) }">View all</a>`
+	},
 	sort: 'label'}) }</div>
