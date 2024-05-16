@@ -104,6 +104,7 @@ const year_sel = view(
 
 function filename(type, role, year)
 {
+	console.log(role);
 	return type + '_' + role + '_' + year + '.html';
 }
 
