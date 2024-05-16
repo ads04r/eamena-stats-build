@@ -130,7 +130,7 @@ function filename(type, role, year)
 	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
 	format: {
 		'label': (x) => htl.html`<em>${ x.label }</em>`,
-		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel, year_sel) }">View all</a>`,
-		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel, year_sel) }">View all</a>`
+		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((d) => d.year === year_sel).flat()[0], year_sel) }">View all</a>`,
+		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((d) => d.year === year_sel).flat()[0], year_sel) }">View all</a>`
 	},
 	sort: 'label'}) }</div>
