@@ -87,6 +87,7 @@ toc: false
 
 ```js
 
+const years = await FileAttachment("data/years.json").json();
 const roles = await FileAttachment("data/combine.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
@@ -96,7 +97,7 @@ const role_sel = view(
 	})
 );
 const year_sel = view(
-	Inputs.select([2019, 2020, 2021, 2022, 2023, 2024], {
+	Inputs.select(years, {
 		label: "Year"
 	})
 );

@@ -9,3 +9,5 @@ touch dist/.nojekyll
 mv old-dist/.git dist/
 rm -Rf old-dist
 chmod -R 755 *
+
+git status
