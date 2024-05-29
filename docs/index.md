@@ -167,8 +167,11 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 ```
 <div class="grid grid-cols-2">
 <div class="card">
-  <h2>Grids</h2>
-  ${ view(Inputs.table(selected_grids(maindata_sel), {})) }
+  <h2>Grid Squares</h2>
+  ${ view(Inputs.table(selected_grids(maindata_sel), {
+	columns: ['label', 'countries'],
+	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
+  })) }
 </div>
 <div class="card"> <h2>Sites</h2> </div>
 </div>
