@@ -145,8 +145,7 @@ function selected_grids(table)
 		for(var j = 0; j < temp_data.length; j++) { data.push(temp_data[j]); }
 	}
 	data = [...new Set(data)]
-	console.log(data);
-	return 'Deigh!';
+	return data;
 }
 
 const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
@@ -160,6 +159,9 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 
 ```
 <div class="grid grid-cols-2">
-<div class="card"> <h2>Grids</h2> ${ selected_grids(maindata_sel) } </div>
+<div class="card">
+  <h2>Grids</h2>
+  ${ selected_grids(maindata_sel) }
+</div>
 <div class="card"> <h2>Sites</h2> </div>
 </div>
