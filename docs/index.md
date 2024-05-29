@@ -108,6 +108,7 @@ const year_sel = view(
 		label: "Year"
 	})
 );
+var maindata;
 
 function filename(type, role, year, row)
 {
