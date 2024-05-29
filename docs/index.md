@@ -137,7 +137,8 @@ function selected_grids(table)
 {
 	for(var i = 0; i < table.length; i++)
 	{
-		console.log(table[i].grids);
+		id = table[i].id;
+		console.log(id)
 	}
 	return 'Deigh!';
 }
