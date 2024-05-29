@@ -131,7 +131,7 @@ function filename(type, role, year, row)
   </div>
 </div>
 
-  <div class="card">${ viewof maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
+  <div class="card">${ maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
 	columns: ['label', 'sites', 'grids'],
 	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
 	format: {
@@ -140,4 +140,4 @@ function filename(type, role, year, row)
 	},
 	sort: 'label'}) }</div>
 
-${ maindata }
+${ viewof maindata }
