@@ -141,7 +141,7 @@ function selected_grids(table)
 	for(var i = 0; i < table.length; i++)
 	{
 		id = table[i].id;
-		temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
+		var temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
 		for(var j = 0; j < temp_data.length; j++) { data.push(temp_data[j]); }
 	}
 	console.log(data);
