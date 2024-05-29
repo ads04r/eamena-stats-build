@@ -137,6 +137,7 @@ function selected_grids(table)
 {
 	var id = '';
 	var data = {}
+	var ret = []
 
 	for(var i = 0; i < table.length; i++)
 	{
@@ -149,7 +150,8 @@ function selected_grids(table)
 			data[grid]['countries'].push(id);
 		}
 	}
-	return data;
+	for(var key in data) { ret.push(data[key]); }
+	return ret;
 }
 
 const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
