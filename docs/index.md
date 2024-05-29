@@ -111,9 +111,7 @@ const year_sel = view(
 
 function filename(type, role, year, row)
 {
-	console.log(role['role'])
-//	console.log(row)
-	return type + '_' + year + '.html';
+	return role['role']['id'] + '_' + type + '_' + year + '.html';
 }
 
 ```
