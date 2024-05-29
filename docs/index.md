@@ -136,15 +136,19 @@ function filename(type, role, year, row)
 function selected_grids(table)
 {
 	var id = '';
-	var data = []
+	var data = {}
 
 	for(var i = 0; i < table.length; i++)
 	{
 		id = table[i].id;
 		var temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
-		for(var j = 0; j < temp_data.length; j++) { data.push(temp_data[j]); }
+		for(var j = 0; j < temp_data.length; j++)
+		{
+			grid = temp_data[j];
+			if(!(grid in data)) { grid[data] = {'label': grid, 'countries': []}; }
+			grid[data]['countries'].push(id);
+		}
 	}
-	data = [...new Set(data)]
 	return data;
 }
 
