@@ -94,11 +94,6 @@ toc: false
 
 ```js
 
-function filename(type, role, year, row)
-{
-	return role['role']['id'] + '_' + type + '_' + year + '.html';
-}
-
 const years = await FileAttachment("data/years.json").json();
 const roles = await FileAttachment("data/combine.json").json();
 const role_sel = view(
@@ -113,15 +108,6 @@ const year_sel = view(
 		label: "Year"
 	})
 );
-
-const maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
-	columns: ['label', 'sites', 'grids'],
-	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
-	format: {
-		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }">View all</a>`,
-		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }">View all</a>`
-	},
-	sort: 'label'});
 
 ```
 
@@ -140,4 +126,20 @@ const maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d
   </div>
 </div>
 
-<div class="card"> ${ view(maindata) } </div>
+```js
+
+function filename(type, role, year, row)
+{
+	return role['role']['id'] + '_' + type + '_' + year + '.html';
+}
+
+const maindata = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
+	columns: ['label', 'sites', 'grids'],
+	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
+	format: {
+		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }">View all</a>`,
+		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }">View all</a>`
+	},
+	sort: 'label'}));
+
+```
