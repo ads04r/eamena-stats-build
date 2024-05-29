@@ -135,7 +135,10 @@ function filename(type, role, year, row)
 
 function selected_grids(table)
 {
-	console.log(table);
+	for(var i = 0; i < table.length; i++)
+	{
+		console.log(table[i].grids);
+	}
 	return 'Deigh!';
 }
 
