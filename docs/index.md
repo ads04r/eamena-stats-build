@@ -133,6 +133,12 @@ function filename(type, role, year, row)
 	return role['role']['id'] + '_' + type + '_' + year + '.html';
 }
 
+function selected_rows(o)
+{
+	console.log(o);
+	return 'Deigh!';
+}
+
 const maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
 	columns: ['label', 'sites', 'grids'],
 	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
@@ -146,4 +152,4 @@ const maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d
 
 <div class="card"> ${ view(maindata) } </div>
 
-<div class="card"> ${ view(maindata.value) } </div>
+<div class="card"> ${ selected_rows(maindata) } </div>
