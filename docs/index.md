@@ -36,6 +36,13 @@ toc: false
   color: var(--theme-foreground-muted);
 }
 
+.nocheckbox td:nth-child(1), .nocheckbox th:nth-child(1) {
+  display: none;
+}
+.nocheckbox td:nth-child(2), .nocheckbox th:nth-child(2) {
+  padding-left: 0px;
+}
+
 @media (min-width: 640px) {
   .hero h1 {
     font-size: 90px;
@@ -104,8 +111,8 @@ const year_sel = view(
 
 function filename(type, role, year, row)
 {
-	console.log(role)
-	console.log(row)
+	console.log(role['role'])
+//	console.log(row)
 	return type + '_' + year + '.html';
 }
 
