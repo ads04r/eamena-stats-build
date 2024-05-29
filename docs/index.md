@@ -144,6 +144,7 @@ function selected_grids(table)
 		var temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
 		for(var j = 0; j < temp_data.length; j++) { data.push(temp_data[j]); }
 	}
+	data = [...new Set(data)]
 	console.log(data);
 	return 'Deigh!';
 }
