@@ -145,8 +145,8 @@ function selected_grids(table)
 		for(var j = 0; j < temp_data.length; j++)
 		{
 			var grid = temp_data[j];
-			if(!(grid in data)) { grid[data] = {'label': grid, 'countries': []}; }
-			grid[data]['countries'].push(id);
+			if(!(grid in data)) { data[grid] = {'label': grid, 'countries': []}; }
+			data[grid]['countries'].push(id);
 		}
 	}
 	return data;
