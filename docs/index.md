@@ -136,14 +136,15 @@ function filename(type, role, year, row)
 function selected_grids(table)
 {
 	var id = '';
-	var data = {}
+	var data = []
 
 	for(var i = 0; i < table.length; i++)
 	{
 		id = table[i].id;
-		data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id];
-		console.log(data);
+		temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
+		for(var j = 0; j < temp_data.length; j++) { data.push(temp_data[j]); }
 	}
+	console.log(data);
 	return 'Deigh!';
 }
 
