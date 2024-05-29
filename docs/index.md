@@ -136,11 +136,13 @@ function filename(type, role, year, row)
 function selected_grids(table)
 {
 	var id = '';
+	var data = {}
 
 	for(var i = 0; i < table.length; i++)
 	{
 		id = table[i].id;
-		console.log(id)
+		data = roles['country_role_year'][id];
+		console.log(data)
 	}
 	return 'Deigh!';
 }
