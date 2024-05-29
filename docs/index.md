@@ -145,3 +145,5 @@ const maindata = Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d
 ```
 
 <div class="card"> ${ view(maindata) } </div>
+
+<div class="card"> ${ viewof maindata } </div>
