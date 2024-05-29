@@ -96,6 +96,7 @@ toc: false
 
 const years = await FileAttachment("data/years.json").json();
 const roles = await FileAttachment("data/combine.json").json();
+const countries = await FileAttachment("data/combine.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
 		label: "Role",
@@ -147,7 +148,7 @@ function selected_grids(table)
 		{
 			var grid = temp_data[j];
 			if(!(grid in data)) { data[grid] = {'label': grid, 'countries': []}; }
-			data[grid]['countries'].push(id);
+			data[grid]['countries'].push(countries[id]);
 		}
 	}
 	for(var key in data) { ret.push(data[key]); }
