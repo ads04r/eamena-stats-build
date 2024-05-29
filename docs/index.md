@@ -150,3 +150,4 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 
 ```
 
+<div class="card"> ${ maindata_sel } </div>
