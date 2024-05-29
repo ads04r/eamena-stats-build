@@ -133,9 +133,9 @@ function filename(type, role, year, row)
 	return role['role']['id'] + '_' + type + '_' + year + '.html';
 }
 
-function selected_rows(o)
+function selected_grids(table)
 {
-	console.log(o);
+	console.log(table);
 	return 'Deigh!';
 }
 
@@ -149,5 +149,7 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 	sort: 'label'}));
 
 ```
-
-<div class="card"> ${ selected_rows(maindata_sel) } </div>
+<div class="grid grid-cols-2">
+<div class="card"> <h2>Grids</h2> ${ selected_grids(maindata_sel) } </div>
+<div class="card"> <h2>Sites</h2> </div>
+</div>
