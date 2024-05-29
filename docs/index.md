@@ -135,6 +135,8 @@ function filename(type, role, year, row)
 
 function selected_grids(table)
 {
+	var id = '';
+
 	for(var i = 0; i < table.length; i++)
 	{
 		id = table[i].id;
