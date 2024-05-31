@@ -165,14 +165,20 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 	},
 	sort: 'label'}));
 
-const grid_sel = Inputs.table(selected_grids(maindata_sel), {
-	columns: ['label', 'countries'],
-	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
-  });
-
 ```
 <div class="grid grid-cols-2">
-<div class="card"> ${ view(grid_sel) } </div>
+<div class="card">
+
+```js
+
+const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
+	columns: ['label', 'countries'],
+	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
+  }));
+
+```
+
+</div>
 <div class="card">
   <h2>Sites</h2>
 </div>
