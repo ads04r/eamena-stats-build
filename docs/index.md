@@ -181,11 +181,6 @@ const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 </div>
 <div class="card">
 
-```js
-
-const site_sel = view(Inputs.table(grid_data[grid_sel]));
-
-```
 
 </div>
 </div>
