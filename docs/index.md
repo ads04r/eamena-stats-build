@@ -172,10 +172,7 @@ const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 
 ```
 <div class="grid grid-cols-2">
-<div class="card">
-  <h2>Grid Squares</h2>
-  ${ grid_sel }
-</div>
+<div class="card"> ${ grid_sel } </div>
 <div class="card">
   <h2>Sites</h2>
 </div>
