@@ -97,6 +97,7 @@ toc: false
 const years = await FileAttachment("data/years.json").json();
 const roles = await FileAttachment("data/combine.json").json();
 const countries = await FileAttachment("data/countries.json").json();
+const grid_data = FileAttachment("data/grid_data.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
 		label: "Role",
@@ -164,14 +165,18 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 	},
 	sort: 'label'}));
 
+const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
+	columns: ['label', 'countries'],
+	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
+  }));
+
 ```
 <div class="grid grid-cols-2">
 <div class="card">
   <h2>Grid Squares</h2>
-  ${ view(Inputs.table(selected_grids(maindata_sel), {
-	columns: ['label', 'countries'],
-	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
-  })) }
+  ${ grid_sel }
 </div>
-<div class="card"> <h2>Sites</h2> </div>
+<div class="card">
+  <h2>Sites</h2>
+</div>
 </div>
