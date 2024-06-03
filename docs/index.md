@@ -171,7 +171,9 @@ function selected_sites(table)
 			var id = item['ID'];
 			var label = item['Label'];
 			var role = item['Role'];
-			console.log(role);
+			var roles = [];
+			if role.isArray() { roles = role; } else { roles.append(role); }
+			console.log(roles);
 			
 //			if(role.id == role_id)
 //			{
