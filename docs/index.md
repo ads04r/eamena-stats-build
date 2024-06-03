@@ -162,7 +162,8 @@ function selected_sites(table)
 
 	for(var i = 0; i < table.length; i++)
 	{
-		ret.append(table[i]);
+		console.log(table[i]);
+		ret.push(table[i]);
 	}
 	return ret
 }
