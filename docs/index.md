@@ -169,6 +169,7 @@ function selected_sites(table)
 //			console.log(year_sel);
 //			console.log(role_sel);
 			console.log(grid_data[table[i]['label']][j]);
+			console.log("");
 			ret.push(grid_data[table[i]['label']][j]);
 		}
 	}
