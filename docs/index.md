@@ -201,6 +201,11 @@ const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 ```js
 
 const site_sel = view(Inputs.table(selected_sites(grid_sel), {
+	columns: ['Label', 'Date', 'ID'],
+	header: {'Label': 'EAMENA ID', 'ID': ''},
+	format: {
+		'ID': (x) => htl.html`<a href="">EAMENA Link</a>`,
+	},
   }));
 
 ```
