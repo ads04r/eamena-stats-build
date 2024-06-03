@@ -188,12 +188,7 @@ function selected_sites(table)
 			}
 			if(ct == 0) { continue; }
 
-			console.log(roles);
-			
-//			if(role.id == role_id)
-//			{
-//				ret.push(item);
-//			}
+			ret.push(item);
 		}
 	}
 	return ret
