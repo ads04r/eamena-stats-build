@@ -156,6 +156,17 @@ function selected_grids(table)
 	return ret;
 }
 
+function selected_sites(table)
+{
+	var ret = []
+
+	for(var i = 0; i < table.length; i++)
+	{
+		ret.append(table[i]);
+	}
+	return ret
+}
+
 const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
 	columns: ['label', 'sites', 'grids'],
 	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
@@ -186,7 +197,7 @@ const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 
 ```js
 
-const site_sel = view(Inputs.table(grid_sel, {
+const site_sel = view(Inputs.table(selected_sites(grid_sel), {
   }));
 
 ```
