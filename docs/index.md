@@ -176,7 +176,7 @@ function selected_sites(table)
 			{
 				roles = role;
 			} else {
-				if(!(typeof role !== 'undefined'))
+				if(typeof role !== 'undefined')
 				{
 					roles.push(role);
 				}
