@@ -204,7 +204,7 @@ const site_sel = view(Inputs.table(selected_sites(grid_sel), {
 	columns: ['Label', 'Date', 'ID'],
 	header: {'Label': 'EAMENA ID', 'ID': ''},
 	format: {
-		'ID': (x) => htl.html`<a href="">EAMENA Link</a>`,
+		'ID': (x) => htl.html`<a href="https://database.eamena.org/report/${ x }">EAMENA Link</a>`,
 	},
   }));
 
