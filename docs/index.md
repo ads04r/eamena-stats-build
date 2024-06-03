@@ -160,16 +160,21 @@ function selected_sites(table)
 {
 	var ret = []
 
+	var id = role_sel.filter((d) => d.year === year_sel);
+	var role_id = console.log(id[0].role.id);
+	var year = console.log(id[0].year);
 	for(var i = 0; i < table.length; i++)
 	{
 		for (var j = 0; j < grid_data[table[i]['label']].length; j++)
 		{
-			var id = role_sel.filter((d) => d.year === year_sel);
-			console.log(id[0].role.id);
-			console.log(id[0].year);
-			console.log(grid_data[table[i]['label']][j]);
-			console.log("");
-			ret.push(grid_data[table[i]['label']][j]);
+			var item = grid_data[table[i]['label']][j];
+			if(item.Role.id == role_id)
+			{
+				if(item.Date.substring(0, 4) == year)
+				{
+					ret.push(item);
+				}
+			}
 		}
 	}
 	return ret
