@@ -174,12 +174,16 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 	columns: ['label', 'countries'],
 	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
+	format: {
+		'label': (x) => htl.html`<strong>${ x }</strong>`,
+	},
   }));
 
 ```
 
 </div>
 <div class="card">
+
 
 
 </div>
