@@ -145,7 +145,7 @@ function selected_grids(table)
 	{
 		id = table[i].id;
 		var temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
-		for(var j = 0; j < temp_data.length; j++)
+ 		for(var j = 0; j < temp_data.length; j++)
 		{
 			var grid = temp_data[j];
 			if(!(grid in data)) { data[grid] = {'label': grid, 'countries': []}; }
@@ -164,8 +164,10 @@ function selected_sites(table)
 	{
 		for (var j = 0; j < grid_data[table[i]['label']].length; j++)
 		{
-			console.log(year_sel);
-			console.log(role_sel);
+			var id = role_sel.filter((d) => d.year === year_sel);
+			console.log(id);
+//			console.log(year_sel);
+//			console.log(role_sel);
 			console.log(grid_data[table[i]['label']][j]);
 			ret.push(grid_data[table[i]['label']][j]);
 		}
