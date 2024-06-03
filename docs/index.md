@@ -97,6 +97,7 @@ toc: false
 const years = await FileAttachment("data/years.json").json();
 const roles = await FileAttachment("data/combine.json").json();
 const countries = await FileAttachment("data/countries.json").json();
+const grid_data = FileAttachment("data/grid_data.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
 		label: "Role",
@@ -144,7 +145,7 @@ function selected_grids(table)
 	{
 		id = table[i].id;
 		var temp_data = role_sel.filter((d) => d.year === year_sel)[0]['country_role_year'][id]['grids'];
-		for(var j = 0; j < temp_data.length; j++)
+ 		for(var j = 0; j < temp_data.length; j++)
 		{
 			var grid = temp_data[j];
 			if(!(grid in data)) { data[grid] = {'label': grid, 'countries': []}; }
@@ -153,6 +154,63 @@ function selected_grids(table)
 	}
 	for(var key in data) { ret.push(data[key]); }
 	return ret;
+}
+
+function selected_sites(table)
+{
+	var ret = []
+
+	var id = role_sel.filter((d) => d.year === year_sel);
+	var role_id = id[0].role.id;
+	var year = id[0].year;
+	for(var i = 0; i < table.length; i++)
+	{
+		for (var j = 0; j < grid_data[table[i]['label']].length; j++)
+		{
+			var item = grid_data[table[i]['label']][j];
+			var id = item['ID'];
+			var label = item['Label'];
+
+			var role = item['Role'];
+			var roles = [];
+			if(Array.isArray(role))
+			{
+				roles = role;
+			} else {
+				if(typeof role !== 'undefined')
+				{
+					roles.push(role);
+				}
+			}
+			var ct = 0;
+			for(var k = 0; k < roles.length; k++)
+			{
+				if(roles[k].id == role_id) { ct++; }
+			}
+			if(ct == 0) { continue; }
+
+			var date = item['Date'];
+			var dates = [];
+			if(Array.isArray(date))
+			{
+				dates = date;
+			} else {
+				if(typeof date !== 'undefined')
+				{
+					dates.push(date);
+				}
+			}
+			var ct = 0;
+			for(var k = 0; k < dates.length; k++)
+			{
+				if(dates[k].substr(0, 4) == year) { ct++; }
+			}
+			if(ct == 0) { continue; }
+
+			ret.push(item);
+		}
+	}
+	return ret
 }
 
 const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
@@ -167,11 +225,33 @@ const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_se
 ```
 <div class="grid grid-cols-2">
 <div class="card">
-  <h2>Grid Squares</h2>
-  ${ view(Inputs.table(selected_grids(maindata_sel), {
+
+```js
+
+const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 	columns: ['label', 'countries'],
 	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
-  })) }
+	format: {
+		'label': (x) => htl.html`<strong>${ x }</strong>`,
+	},
+  }));
+
+```
+
 </div>
-<div class="card"> <h2>Sites</h2> </div>
+<div class="card">
+
+```js
+
+const site_sel = view(Inputs.table(selected_sites(grid_sel), {
+	columns: ['Label', 'Date', 'ID'],
+	header: {'Label': 'EAMENA ID', 'Date': 'Assessment Date(s)', 'ID': ''},
+	format: {
+		'ID': (x) => htl.html`<a href="https://database.eamena.org/report/${ x }">EAMENA Link</a>`,
+	},
+  }));
+
+```
+
+</div>
 </div>
