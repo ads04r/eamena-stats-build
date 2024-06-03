@@ -168,10 +168,11 @@ function selected_sites(table)
 		for (var j = 0; j < grid_data[table[i]['label']].length; j++)
 		{
 			var item = grid_data[table[i]['label']][j];
-			if(item.Role.id == role_id)
-			{
-				ret.push(item);
-			}
+			console.log(item);
+//			if(item.Role.id == role_id)
+//			{
+//				ret.push(item);
+//			}
 		}
 	}
 	return ret
