@@ -165,9 +165,8 @@ function selected_sites(table)
 		for (var j = 0; j < grid_data[table[i]['label']].length; j++)
 		{
 			var id = role_sel.filter((d) => d.year === year_sel);
-			console.log(id);
-//			console.log(year_sel);
-//			console.log(role_sel);
+			console.log(id[0].role.id);
+			console.log(id[0].year);
 			console.log(grid_data[table[i]['label']][j]);
 			console.log("");
 			ret.push(grid_data[table[i]['label']][j]);
