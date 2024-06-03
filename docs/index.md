@@ -181,6 +181,13 @@ function selected_sites(table)
 					roles.push(role);
 				}
 			}
+			var ct = 0;
+			for(var k = 0; k < roles.length; k++)
+			{
+				if(roles[k].id == role_id) { ct++; }
+			}
+			if(ct == 0) { continue; }
+
 			console.log(roles);
 			
 //			if(role.id == role_id)
