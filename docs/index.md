@@ -162,8 +162,10 @@ function selected_sites(table)
 
 	for(var i = 0; i < table.length; i++)
 	{
-		console.log(grid_data[table[i]['label']]);
-		ret.push(table[i]);
+		for (var j = 0; j < grid_data[table[i]['label']]; j++)
+		{
+			ret.push(grid_data[table[i]['label']][j]);
+		}
 	}
 	return ret
 }
