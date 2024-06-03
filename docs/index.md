@@ -170,6 +170,7 @@ function selected_sites(table)
 			var item = grid_data[table[i]['label']][j];
 			var id = item['ID'];
 			var label = item['Label'];
+
 			var role = item['Role'];
 			var roles = [];
 			if(Array.isArray(role))
@@ -185,6 +186,24 @@ function selected_sites(table)
 			for(var k = 0; k < roles.length; k++)
 			{
 				if(roles[k].id == role_id) { ct++; }
+			}
+			if(ct == 0) { continue; }
+
+			var date = item['Date'];
+			var dates = [];
+			if(Array.isArray(date))
+			{
+				dates = date;
+			} else {
+				if(typeof date !== 'undefined')
+				{
+					dates.push(date);
+				}
+			}
+			var ct = 0;
+			for(var k = 0; k < dates.length; k++)
+			{
+				if(dates[k].substr(0, 4) == year) { ct++; }
 			}
 			if(ct == 0) { continue; }
 
