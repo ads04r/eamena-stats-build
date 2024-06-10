@@ -232,7 +232,7 @@ const grid_sel = view(Inputs.table(selected_grids(maindata_sel), {
 	columns: ['label', 'countries'],
 	header: {'label': 'Grid square', 'countries': 'Country / Countries'},
 	format: {
-		'label': (x) => htl.html`<strong>${ x }</strong> <a href="">Detail</a>`,
+		'label': (x) => htl.html`<strong>${ x }</strong> <a href="{{ x }}.html">Detail</a>`,
 	},
   }));
 
