@@ -1,6 +1,6 @@
 import json, csv, os, sys
 
-base_path = os.path.abspath(os.path.dirname(__file__))
+base_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'docs', 'data')
 
 h = []
 data = {}
@@ -32,13 +32,13 @@ with open(os.path.join(base_path, 'grid_data.json'), 'r') as fp:
 
 for gridk in grid_data.keys():
 	grid_id = str(gridk)
-	grid = {}
+	ret = []
 	for item in grid_data[grid_id]:
-		site_id = item['ID']
+		uuid = item['ID']
 		tiles = []
-		if site_id in data:
-			tiles = data[site_id]
-		grid[site_id] = {'id': site_id, 'label': item['Label'], 'tiles': tiles}
-	ret[grid_id] = grid
-
-print(json.dumps(ret, indent=4))
+		if uuid in data:
+			tiles = data[uuid]
+		item['Tiles'] = tiles
+		ret.append(item)
+	with open(os.path.join(base_path, 'grids', grid_id + '.json'), 'w') as fp:
+		fp.write(json.dumps(ret))
