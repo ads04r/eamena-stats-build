@@ -1,11 +1,17 @@
 import json, csv, os, sys
 
-base_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'docs', 'data')
+base_path = os.path.join(os.path.abspath(os.path.dirname(__file__)))
+docs_path = os.path.join(base_path, 'docs')
+data_path = os.path.join(docs_path, 'data')
+template_file = os.path.join(base_path, 'template.md')
+
+with open(template_file, 'r') as fp:
+	template = fp.read()
 
 h = []
 data = {}
 ret = {}
-with open(os.path.join(base_path, 'tiles.csv'), 'r') as fp:
+with open(os.path.join(data_path, 'tiles.csv'), 'r') as fp:
 	r = csv.reader(fp, delimiter=',', quotechar='"')
 	for row in r:
 		if len(h) == 0:
@@ -27,7 +33,7 @@ with open(os.path.join(base_path, 'tiles.csv'), 'r') as fp:
 		v = int(item['tiles'])
 		data[id].append([k, v])
 
-with open(os.path.join(base_path, 'grid_data.json'), 'r') as fp:
+with open(os.path.join(data_path, 'grid_data.json'), 'r') as fp:
 	grid_data = json.load(fp)
 
 for gridk in grid_data.keys():
@@ -40,5 +46,7 @@ for gridk in grid_data.keys():
 			tiles = data[uuid]
 		item['Tiles'] = tiles
 		ret.append(item)
-	with open(os.path.join(base_path, 'grids', grid_id + '.json'), 'w') as fp:
+	with open(os.path.join(docs_path, grid_id + '.md'), 'w') as fp:
+		fp.write(template.replace("%%%", grid_id))
+	with open(os.path.join(data_path, 'grids', grid_id + '.json'), 'w') as fp:
 		fp.write(json.dumps(ret))

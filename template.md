@@ -1,11 +1,11 @@
 ---
 toc: false
 ---
-# E34N31-32
+# %%%
 
 ```js
 
-const grid_data = await FileAttachment("data/grids/E34N31-32.json").json();
+const grid_data = await FileAttachment("data/grids/%%%.json").json();
 
 function summarise(item)
 {

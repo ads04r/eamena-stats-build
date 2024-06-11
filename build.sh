@@ -3,6 +3,9 @@
 BASE_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd $BASE_PATH
+
+#python ./make_grids.py
+
 mv dist old-dist
 npm run build
 touch dist/.nojekyll
