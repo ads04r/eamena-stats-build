@@ -71,8 +71,7 @@ const site_sel = view(Inputs.table(grid_data, {
                         x: "records",
                         y: "label",
                         color: { legend: false },
-                        fill: "label",
-                        sort: { y: "x", reverse: true, limit: 10 }
+                        fill: "label"
                 }),
                 Plot.text(summarise(site_sel), {
                         text: d => `${ d.records }`,
