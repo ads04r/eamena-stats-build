@@ -78,8 +78,7 @@ toc: false
 			y: "label",
 			textAnchor: "start",
 			dx: 3,
-			fill: "white",
-			sort: { y: "x", reverse: true, limit: 10 }
+			fill: "white"
 		}),
 		Plot.text(roles, {
 			text: d => d.label,
@@ -87,8 +86,7 @@ toc: false
 			x: 0,
 			y: "label",
 			dx: -3,
-			fill: "white",
-			sort: { y: "x", reverse: true, limit: 10 }
+			fill: "white"
 		})
 	]
     }))
