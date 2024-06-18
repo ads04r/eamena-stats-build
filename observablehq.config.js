@@ -3,4 +3,5 @@ export default {
   root: "docs",
   theme: "ocean-floor",
   sidebar: false,
+  pager: false,
 };
