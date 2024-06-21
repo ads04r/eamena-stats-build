@@ -15,4 +15,4 @@ chmod -R 755 *
 
 git add .
 git commit -a -m "Auto-commit on build"
-git push -u origin dev
+git push -u origin master
