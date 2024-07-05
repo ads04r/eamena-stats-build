@@ -113,13 +113,21 @@ const year_sel = view(
 
 ```
 
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-5">
   <div class="card">
 	<p> Total sites </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_total } </h2>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_total } </h2>
   </div>
   <div class="card">
 	<p> Total grid squares </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role_total } </h2>
+  </div>
+  <div class="card">
+	<p> Year sites </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_total } </h2>
+  </div>
+  <div class="card">
+	<p> Year grid squares </p>
 	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role_year } </h2>
   </div>
   <div class="card">
