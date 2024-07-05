@@ -226,12 +226,11 @@ function selected_sites(table)
 }
 
 const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
-	columns: ['label', 'sites', 'grids', 'grids_all'],
-	header: {'label': 'Country', 'sites': 'Sites (year)', 'grids': 'Grid squares (year)', 'grids_all': 'Grid squares (total)'},
+	columns: ['label', 'sites', 'grids'],
+	header: {'label': 'Country', 'sites': 'Sites (year/total)', 'grids': 'Grid squares (year/total)'},
 	format: {
-		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`,
-		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`,
-		'grids_all': (x) => htl.html`<strong>${ x }</strong>&nbsp;HELLO`
+		'sites': (x) => htl.html`<strong>${ x.role_year } / { x.role }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`,
+		'grids': (x) => htl.html`<strong>${ x.role_year } / { x.role }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`
 	},
 	sort: 'label'}));
 
