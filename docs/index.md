@@ -113,7 +113,7 @@ const year_sel = view(
 
 ```
 
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-4">
   <div class="card">
 	<p> Total sites </p>
 	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_total } </h2>
@@ -123,20 +123,12 @@ const year_sel = view(
 	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_total } </h2>
   </div>
   <div class="card">
-	<p> Bulk uploads </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_bulk } </h2>
-  </div>
-  <div class="card">
-	<p> Year sites </p>
+	<p> ${ year_sel } sites </p>
 	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_total } </h2>
   </div>
   <div class="card">
-	<p> Year grid squares </p>
+	<p> ${ year_sel } grid squares </p>
 	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role_year } </h2>
-  </div>
-  <div class="card">
-	<p> Bulk uploads </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_bulk } </h2>
   </div>
 </div>
 
