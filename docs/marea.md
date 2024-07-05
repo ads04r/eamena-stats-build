@@ -21,4 +21,6 @@ toc: false
 
 # MarEA Stats Page
 
+<div class="card">
 ![Progress map](map.png)
+</div>
