@@ -11,10 +11,8 @@ toc: false
   padding-left: 0px;
 }
 
-@media (min-width: 640px) {
-  .hero h1 {
-    font-size: 90px;
-  }
+.card img {
+  max-width: 100% !important;
 }
 
 </style>
