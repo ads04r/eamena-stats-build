@@ -120,7 +120,7 @@ const year_sel = view(
   </div>
   <div class="card">
 	<p> Total grid squares </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_total } </h2>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role } </h2>
   </div>
   <div class="card">
 	<p> ${ year_sel } sites </p>
@@ -259,3 +259,4 @@ const site_sel = view(Inputs.table(selected_sites(grid_sel), {
 
 </div>
 </div>
+
