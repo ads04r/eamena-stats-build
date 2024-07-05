@@ -24,6 +24,4 @@ toc: false
 
 ![Progress map](map.png)
 
-[Download this map](map.png)
-
 </div>
