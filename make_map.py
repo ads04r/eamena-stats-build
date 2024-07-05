@@ -7,7 +7,7 @@ docs_path = os.path.join(base_path, 'docs')
 data_path = os.path.join(docs_path, 'data')
 static_path = os.path.join(data_path, 'static')
 summary_file = os.path.join(data_path, 'marea_grid_summaries.json')
-map_file = os.path.join(dist_path, 'map.png')
+map_file = os.path.join(docs_path, 'map.png')
 
 with open(summary_file, 'r') as fp:
 	data = json.load(fp)
