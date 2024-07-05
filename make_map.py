@@ -45,9 +45,6 @@ for grid_key in data.keys():
 	except:
 		uploaded = 0
 
-	if pinned != uploaded:
-		print(status)
-
 	if status in complete_status:
 		polygon = Polygon(coords=coordinates, fill_color='#007F00', outline_color='#000000', simplify=False)
 		m.add_polygon(polygon)
