@@ -113,18 +113,22 @@ const year_sel = view(
 
 ```
 
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-4">
   <div class="card">
 	<p> Total sites </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_total } </h2>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_total } </h2>
   </div>
   <div class="card">
 	<p> Total grid squares </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role_year } </h2>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role } </h2>
   </div>
   <div class="card">
-	<p> Bulk uploads </p>
-	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_bulk } </h2>
+	<p> ${ year_sel } sites </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].role_year_total } </h2>
+  </div>
+  <div class="card">
+	<p> ${ year_sel } grid squares </p>
+	<h2> ${ role_sel.filter((d) => d.year === year_sel).flat()[0].grid_role_year } </h2>
   </div>
 </div>
 
@@ -215,10 +219,10 @@ function selected_sites(table)
 
 const maindata_sel = view(Inputs.table(role_sel.filter((d) => d.year === year_sel).map((d) => d.countries).flat().filter((d) => d.sites.role_year > 0), {
 	columns: ['label', 'sites', 'grids'],
-	header: {'label': 'Country', 'sites': 'Sites uploaded/ammended', 'grids': 'Grid squares covered'},
+	header: {'label': 'Country', 'sites': 'Sites (year/total)', 'grids': 'Grid squares (year/total)'},
 	format: {
-		'sites': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`,
-		'grids': (x) => htl.html`<strong>${ x.role_year }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`
+		'sites': (x) => htl.html`<strong>${ x.role_year } / ${ x.role }</strong>&nbsp;<a href="${ filename('sites', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`,
+		'grids': (x) => htl.html`<strong>${ x.role_year } / ${ x.role }</strong>&nbsp;<a href="${ filename('grids', role_sel.filter((y) => y.year === year_sel).flat()[0], year_sel, '') }"></a>`
 	},
 	sort: 'label'}));
 
@@ -255,3 +259,4 @@ const site_sel = view(Inputs.table(selected_sites(grid_sel), {
 
 </div>
 </div>
+
