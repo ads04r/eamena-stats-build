@@ -46,7 +46,7 @@ function role_expand(role)
 	return role.label;
 }
 
-const site_sel = view(Inputs.table(grid_data, {
+const site_sel = view(Inputs.table(grid_data['sites'], {
         columns: ['Label', 'Role', 'Date', 'Tiles', 'ID'],
         header: {'Label': 'EAMENA ID', 'Date': 'Assessment Date(s)', 'Tiles': 'Assessments', 'ID': ''},
         format: {
