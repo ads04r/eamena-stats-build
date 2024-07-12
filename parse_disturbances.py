@@ -3,7 +3,7 @@ import json, csv, os, sys
 base_path = os.path.join(os.path.abspath(os.path.dirname(__file__)))
 docs_path = os.path.join(base_path, 'docs')
 data_path = os.path.join(docs_path, 'data')
-output_file = os.path.join(data_path, 'grid_geometries.json')
+output_file = os.path.join(data_path, 'disturbances.json')
 
 ret = []
 map = {}
