@@ -5,7 +5,7 @@ docs_path = os.path.join(base_path, 'docs')
 data_path = os.path.join(docs_path, 'data')
 output_file = os.path.join(data_path, 'disturbances.json')
 
-ret = []
+ret = {}
 map = {}
 
 with open(os.path.join(data_path, 'values.csv'), 'r') as fp:
@@ -76,7 +76,7 @@ with open(os.path.join(data_path, 'disturbances.csv'), 'r') as fp:
 			if 'Disturbance Cause Type' in item['data']:
 				item['disturbances'] = item['data']['Disturbance Cause Type']
 			del(item['tiledata'])
-			ret.append(item)
+			ret[item['resourceinstanceid']] = item
 
 with open(output_file, 'w') as fp:
 	fp.write(json.dumps(ret))

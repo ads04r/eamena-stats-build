@@ -3,10 +3,13 @@ import json, csv, os, sys
 base_path = os.path.join(os.path.abspath(os.path.dirname(__file__)))
 docs_path = os.path.join(base_path, 'docs')
 data_path = os.path.join(docs_path, 'data')
+disturbances_file = os.path.join(data_path, 'disturbances.json')
 template_file = os.path.join(base_path, 'grid_template.md')
 
 with open(template_file, 'r') as fp:
 	template = fp.read()
+with open(disturbances_file, 'r') as fp:
+	disturbances = json.load(fp)
 
 h = []
 data = {}
@@ -42,9 +45,13 @@ for gridk in grid_data.keys():
 	for item in grid_data[grid_id]:
 		uuid = item['ID']
 		tiles = []
+		dist = []
 		if uuid in data:
 			tiles = data[uuid]
+		if uuid in disturbances:
+			dist = disturbances[uuid]
 		item['Tiles'] = tiles
+		item['Disturbances'] = dist
 		ret['sites'].append(item)
 	with open(os.path.join(docs_path, grid_id + '.md'), 'w') as fp:
 		fp.write(template.replace("%%%", grid_id))
