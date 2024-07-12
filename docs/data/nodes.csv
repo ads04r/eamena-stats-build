@@ -1,0 +1,577 @@
+nodeid,name
+e7884aa3-52f5-11ea-a3f7-02e7594ce0a0,Scale Type
+eaad4114-c5ab-11ea-9026-02e7594ce0a0,Editor Appellation
+edecaffb-52f5-11ea-a3f7-02e7594ce0a0,Edition
+34cfe98f-c2c0-11ea-9026-02e7594ce0a0,Resource Summary
+34cfe9b0-c2c0-11ea-9026-02e7594ce0a0,Site Feature Form Type Belief
+d0987de3-fad8-11e6-a434-6c4008b05c4c,SEARCH_ITEMS_PER_PAGE
+d0987ec0-fad8-11e6-aad3-6c4008b05c4c,SEARCH_EXPORT_LIMIT
+feb95991-fa14-11e6-974f-6c4008b05c4c,SAVED_SEARCHES
+0e8fe457-4148-11e7-9c10-c4b301baab9f,Mapbox
+34cfea41-c2c0-11ea-9026-02e7594ce0a0,Datum
+cd8ff002-f375-11ea-afe6-0a5a9a4f6ef7,FUNCTION_INTERPRETATION_INFERENCE_MAKING_ACTOR_NAME
+34cfea7d-c2c0-11ea-9026-02e7594ce0a0,Heritage Place Function Certainty 
+34cfe9ec-c2c0-11ea-9026-02e7594ce0a0,Related Geoarchaeology/Palaeolandscape
+34cfea71-c2c0-11ea-9026-02e7594ce0a0,Measurement
+0e8fdef0-4148-11e7-8330-c4b301baab9f,Project Extent
+0e8fe87a-4148-11e7-aa8b-c4b301baab9f,Map Zoom
+0e8ff31c-4148-11e7-998a-c4b301baab9f,Map Settings
+f2322125-52f7-11ea-a3f7-02e7594ce0a0,Shared Data Source Sharer
+f2322128-52f7-11ea-a3f7-02e7594ce0a0,Shared Data Source Affiliation
+f2322129-52f7-11ea-a3f7-02e7594ce0a0,Shared Data Source Appellation
+f3124fb3-52f5-11ea-a3f7-02e7594ce0a0,Creator Appellation 
+f3ef77bf-52f7-11ea-a3f7-02e7594ce0a0,Time-span Shared Data Source Creation Event
+f3ef77c2-52f7-11ea-a3f7-02e7594ce0a0,Shared Data Source Date of Creation
+f7cc2731-52f5-11ea-a3f7-02e7594ce0a0,Map Source Type
+ff7ee06d-52f5-11ea-a3f7-02e7594ce0a0,Place of publication
+341f9905-5253-11ea-a3f7-02e7594ce0a0,Catalogue ID
+349cac15-52f8-11ea-a3f7-02e7594ce0a0,Shared Data Source Creator Appellation
+35b99cb6-379a-11ea-9989-06f597a7d5ce,Information Resource
+34cfea54-c2c0-11ea-9026-02e7594ce0a0,Threat Inference Making Assessor
+39bf3871-5252-11ea-a3f7-02e7594ce0a0,Publisher 
+39bf3874-5252-11ea-a3f7-02e7594ce0a0,Publisher Appellation
+0e8ff675-4148-11e7-9c88-c4b301baab9f,Search Results Grid
+0e8ff9d1-4148-11e7-90ed-c4b301baab9f,DEFAULT_MAP_ZOOM
+0e8ffaf5-4148-11e7-b24d-c4b301baab9f,HEX_BIN_PRECISION
+0800e7a5-5250-11ea-a3f7-02e7594ce0a0,Information Resource Type Assignment
+0e8ffbcf-4148-11e7-a95a-c4b301baab9f,DEFAULT_BOUNDS
+0e8ffcab-4148-11e7-a571-c4b301baab9f,HEX_BIN_SIZE
+0e8fff21-4148-11e7-ba78-c4b301baab9f,MAP_MAX_ZOOM
+0e9000b0-4148-11e7-bd19-c4b301baab9f,MAPBOX_API_KEY
+0e90017a-4148-11e7-82ce-c4b301baab9f,MAP_MIN_ZOOM
+0e900254-4148-11e7-9902-c4b301baab9f,MAPBOX_SPRITES
+0e90031e-4148-11e7-a176-c4b301baab9f,MAPBOX_GLYPHS
+32f2d663-fae4-11e6-83ad-6c4008b05c4c,TEMPORAL_SEARCH
+32f2dc66-fae4-11e6-9556-6c4008b05c4c,TIME_WHEEL_CONFIGURATION
+32f2de17-fae4-11e6-bb3b-6c4008b05c4c,COLOR_RAMP
+c5a2a2e8-fadd-11e6-9849-6c4008b05c4c,ANALYTICS
+c5a2a914-fadd-11e6-8f8f-6c4008b05c4c,SYSTEM_SETTINGS
+c5a2b1dc-fadd-11e6-a726-6c4008b05c4c,APP_NAMES
+c5a2b530-fadd-11e6-b5f6-6c4008b05c4c,SPARQL_ENDPOINT_PROVIDERS
+c5a2b94a-fadd-11e6-a029-6c4008b05c4c,APP_NAME
+c5a2ba63-fadd-11e6-9306-6c4008b05c4c,SPARQL_ENDPOINT_PROVIDER
+c5a2bdb3-fadd-11e6-8c96-6c4008b05c4c,ETL_USERNAME
+c5a2be85-fadd-11e6-b72f-6c4008b05c4c,GOOGLE_ANALYTICS_TRACKING_ID
+d0987880-fad8-11e6-8cce-6c4008b05c4c,BASIC_SEARCH_SETTINGS
+d0987cc2-fad8-11e6-8581-6c4008b05c4c,SEARCH_DROPDOWN_LENGTH
+feb95eae-fa14-11e6-9683-6c4008b05c4c,SEARCH_URL
+feb96005-fa14-11e6-aa8d-6c4008b05c4c,IMAGE
+feb96126-fa14-11e6-9f19-6c4008b05c4c,SEARCH_NAME
+feb9623d-fa14-11e6-a9c3-6c4008b05c4c,SEARCH_DESCRIPTION
+ff62303a-fa12-11e6-a889-6c4008b05c4c,ARCHES_SYSTEM_SETTINGS
+3d0dfc7f-5251-11ea-a3f7-02e7594ce0a0,Title
+3d7ddeb7-5253-11ea-a3f7-02e7594ce0a0,Acquisition Assignment 
+3d7ddeba-5253-11ea-a3f7-02e7594ce0a0,Imagery Sensor Type
+3d7ddebb-5253-11ea-a3f7-02e7594ce0a0,Imagery Platform Type
+3d7ddebc-5253-11ea-a3f7-02e7594ce0a0,Imagery Camera Sensor Resolution Type
+3d7ddebd-5253-11ea-a3f7-02e7594ce0a0,Imagery Camera Sensor Type
+34cfea58-c2c0-11ea-9026-02e7594ce0a0,Site Feature Interpretation Type
+34cfea1f-c2c0-11ea-9026-02e7594ce0a0,Depth/Elevation
+ff7ee070-52f5-11ea-a3f7-02e7594ce0a0,Biblio Place Appellation
+ff7ee071-52f5-11ea-a3f7-02e7594ce0a0,Map Place Appellation
+0800e7a9-5250-11ea-a3f7-02e7594ce0a0,Information Resource Type
+3d7ddec2-5253-11ea-a3f7-02e7594ce0a0,Imagery Bands Type
+3de4f413-52f7-11ea-a3f7-02e7594ce0a0,Time-span Resource Creation Event
+3de4f416-52f7-11ea-a3f7-02e7594ce0a0,Date of Creation
+4077fafd-5253-11ea-a3f7-02e7594ce0a0,Time-span Resource Acquisition Event
+4077fb00-5253-11ea-a3f7-02e7594ce0a0,Date of Acquisition
+47ecc2cd-5253-11ea-a3f7-02e7594ce0a0,Right Description
+47ecc2d0-5253-11ea-a3f7-02e7594ce0a0,Right Type
+49c2fb32-5250-11ea-a3f7-02e7594ce0a0,Bibliography
+4c403a80-8a3d-11ea-a6a6-02e7594ce0a0,INFORMATION ID
+4eaf16fd-5251-11ea-a3f7-02e7594ce0a0,Date of Publication
+4eaf1700-5251-11ea-a3f7-02e7594ce0a0,Time-span Publication Event
+4f95a75d-52f1-11ea-a3f7-02e7594ce0a0,Source
+4f95a760-52f1-11ea-a3f7-02e7594ce0a0,Source Appellation
+54c62e2e-524f-11ea-a3f7-02e7594ce0a0,Resource Type
+587447d5-b0c2-11ea-9b1f-02e7594ce0a0,Location
+587447dd-b0c2-11ea-9b1f-02e7594ce0a0,Grid ID
+587447e2-b0c2-11ea-9b1f-02e7594ce0a0,Country Type
+587447e7-b0c2-11ea-9b1f-02e7594ce0a0,Modern Country Territory
+641b3858-52f7-11ea-a3f7-02e7594ce0a0,Shared Data
+587447d2-b0c2-11ea-9b1f-02e7594ce0a0,Geometric Place Expression
+34cfe9f8-c2c0-11ea-9026-02e7594ce0a0,Site Feature Number Type
+34cfea81-c2c0-11ea-9026-02e7594ce0a0,Assessment Activity Date
+34cfea3b-c2c0-11ea-9026-02e7594ce0a0,Heritage Place
+6a5d14c7-5251-11ea-a3f7-02e7594ce0a0,Volume
+09b9c67f-5250-11ea-a3f7-02e7594ce0a0,Information Carrier
+09b9c682-5250-11ea-a3f7-02e7594ce0a0,Information Carrier Format Type
+11da5279-80a5-11ea-a6a6-02e7594ce0a0,Related Site
+11da527d-80a5-11ea-a6a6-02e7594ce0a0,Relationship from Date
+11da527e-80a5-11ea-a6a6-02e7594ce0a0,Relationship Comments
+11da527f-80a5-11ea-a6a6-02e7594ce0a0,Relationship to Date
+6c0d426a-c5aa-11ea-9026-02e7594ce0a0,Author
+7f41dcde-518c-11ea-a3f7-02e7594ce0a0,URL
+8439ef28-52f5-11ea-a3f7-02e7594ce0a0,Cartography
+8ab38e85-52f2-11ea-a3f7-02e7594ce0a0,Imagery Sampled Resolution Type
+8e38fc39-52f2-11ea-a3f7-02e7594ce0a0,Processing Type
+90181f02-5252-11ea-a3f7-02e7594ce0a0,Imagery
+99e55b37-5251-11ea-a3f7-02e7594ce0a0,Issues
+9fb54d2d-c6a6-11ea-a292-02e7594ce0a0,Restricted Access Record Designation
+a5994993-5251-11ea-a3f7-02e7594ce0a0,Editor
+aa018e31-8098-11ea-a6a6-02e7594ce0a0,Related Detailed Condition Assessment
+aa018e34-8098-11ea-a6a6-02e7594ce0a0,Resource Relationships
+aa018e42-8098-11ea-a6a6-02e7594ce0a0,Relationship Comments
+aa8a789b-5251-11ea-a3f7-02e7594ce0a0,Source
+aa8a789e-5251-11ea-a3f7-02e7594ce0a0,Source Appellation
+34cfe9c2-c2c0-11ea-9026-02e7594ce0a0,Disturbance Event
+34cfe9c5-c2c0-11ea-9026-02e7594ce0a0,Material
+34cfea4d-c2c0-11ea-9026-02e7594ce0a0,Assessment Activity Type
+34cfea59-c2c0-11ea-9026-02e7594ce0a0,Site Feature Form Type Certainty
+34cfea5b-c2c0-11ea-9026-02e7594ce0a0,Assessment Activity
+34cfea5c-c2c0-11ea-9026-02e7594ce0a0,Effect Certainty
+14e4ffc3-5251-11ea-a3f7-02e7594ce0a0,Place of publication
+34cfe9fb-c2c0-11ea-9026-02e7594ce0a0,Threat Inference Making
+34cfea69-c2c0-11ea-9026-02e7594ce0a0,Overall Site Shape Type
+34cfea6d-c2c0-11ea-9026-02e7594ce0a0,Address
+34cfea77-c2c0-11ea-9026-02e7594ce0a0,General Description
+34cfea6b-c2c0-11ea-9026-02e7594ce0a0,Construction Technique
+34cfea5d-c2c0-11ea-9026-02e7594ce0a0,Grid ID
+34cfea44-c2c0-11ea-9026-02e7594ce0a0,Site Feature Interpretation Certainty
+34cfe998-c2c0-11ea-9026-02e7594ce0a0,Marine Environment
+34cfea3d-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Certainty 
+22877ce5-52f2-11ea-a3f7-02e7594ce0a0,Creator Appellation 
+33721083-5252-11ea-a3f7-02e7594ce0a0,Figure
+363f4abf-5252-11ea-a3f7-02e7594ce0a0,Pages
+34cfea19-c2c0-11ea-9026-02e7594ce0a0,Site Feature Shape Type
+34cfea25-c2c0-11ea-9026-02e7594ce0a0,Land Cover
+34cfea3a-c2c0-11ea-9026-02e7594ce0a0,Land Cover Assessment
+b4054b1c-07c2-11eb-a232-02e7594ce0a0,Material Class
+34cfea60-c2c0-11ea-9026-02e7594ce0a0,Measurement Unit
+34cfea83-c2c0-11ea-9026-02e7594ce0a0,Archaeological From Date
+34cfe9bc-c2c0-11ea-9026-02e7594ce0a0,Environment Assessment
+34cfea8c-c2c0-11ea-9026-02e7594ce0a0,Dimension 
+e3cc8c5c-c772-11ea-a292-02e7594ce0a0,Disturbance Date From
+e3cc8c5d-c772-11ea-a292-02e7594ce0a0,Disturbance Date To 
+34cfe9bf-c2c0-11ea-9026-02e7594ce0a0,Estimated Damage Extent
+34cfe9c8-c2c0-11ea-9026-02e7594ce0a0,Description Assignment
+34cfea45-c2c0-11ea-9026-02e7594ce0a0,Heritage Place Function Belief
+41afc438-c5fb-11ea-9026-02e7594ce0a0,AH Date From
+b528b064-5189-11ea-a3f7-02e7594ce0a0,Description
+bf22c079-52f1-11ea-a3f7-02e7594ce0a0,Time-span Mapping Publication Event
+bf22c07c-52f1-11ea-a3f7-02e7594ce0a0,Date of File
+c712066a-8094-11ea-a6a6-02e7594ce0a0,File Upload
+d25a68cc-5228-11ea-a3f7-02e7594ce0a0,URL Access Date
+d2c1d525-52f6-11ea-a3f7-02e7594ce0a0,Tile Square Appellation
+d4afc9d7-52f6-11ea-a3f7-02e7594ce0a0,Tile Sqaure Details
+d7b3f06d-52f6-11ea-a3f7-02e7594ce0a0,Projection Type
+e48c6f2d-52f5-11ea-a3f7-02e7594ce0a0,Series Type
+5348cf6b-c2c5-11ea-9026-02e7594ce0a0,Location Certainty
+086e756c-cb86-11ea-a292-02e7594ce0a0,SH Date From
+34cfe9cb-c2c0-11ea-9026-02e7594ce0a0,Archaeological Timespace
+34cfea38-c2c0-11ea-9026-02e7594ce0a0,Wave Climate
+14e4ffc6-5251-11ea-a3f7-02e7594ce0a0,Biblio Place Appellation
+38cff73a-c77b-11ea-a292-02e7594ce0a0,Cultural Sub-period Certainty
+34cfea6c-c2c0-11ea-9026-02e7594ce0a0,Archaeological To Date
+52bb1e74-fbea-11e9-b345-06f597a7d5ce,Disturbance Event (E27)
+587447df-b0c2-11ea-9b1f-02e7594ce0a0,Address
+38cff73c-c77b-11ea-a292-02e7594ce0a0,Cultural Sub-period Type
+34cfea7f-c2c0-11ea-9026-02e7594ce0a0,Disturbance Date Occurred On 
+52bb1e85-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Type 
+f9587707-b0ae-11ea-9b1f-02e7594ce0a0,Location
+12ceca4f-fa3e-11e9-b345-06f597a7d5ce,Material Type 
+12d3df10-b0b0-11ea-9b1f-02e7594ce0a0,Location Certainty
+1d5f1720-fbf1-11e9-b345-06f597a7d5ce,Assessment Activity Date
+20acf550-fbf1-11e9-b345-06f597a7d5ce,Assessment Activity Type
+300bdc74-cdb9-11ea-a292-02e7594ce0a0,Threat and Risk Assessor
+3444ed9f-b0b8-11ea-9b1f-02e7594ce0a0,Related Information Resources
+3444eda2-b0b8-11ea-9b1f-02e7594ce0a0,Information Resource Relationship Comments
+3444eda4-b0b8-11ea-9b1f-02e7594ce0a0,Relationship to Date
+3444eda5-b0b8-11ea-9b1f-02e7594ce0a0,Relationship from Date
+34894dc2-8a3e-11ea-a6a6-02e7594ce0a0,CONDITION ID
+3f1a4750-c521-11ea-9026-02e7594ce0a0,Built Component
+4204b5c5-cdb7-11ea-a292-02e7594ce0a0,Risk Level Belief 
+4204b5c8-cdb7-11ea-a292-02e7594ce0a0,Risk Level
+52bb1e71-fbea-11e9-b345-06f597a7d5ce,Damage Observation
+34cfea84-c2c0-11ea-9026-02e7594ce0a0,Priority Type
+52bb1e78-fbea-11e9-b345-06f597a7d5ce,Disturbance Event Timespan
+52bb1e79-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Assignment Assessor
+52bb1e7c-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Assignment Assessor Name
+52bb1e7d-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Category Type
+52bb1e7e-fbea-11e9-b345-06f597a7d5ce,Damage Effect Belief
+52bb1e80-fbea-11e9-b345-06f597a7d5ce,Disturbance Date Occurred On 
+52bb1e81-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Assignment
+52bb1e83-fbea-11e9-b345-06f597a7d5ce,Disturbance Date To 
+52bb1e84-fbea-11e9-b345-06f597a7d5ce,Disturbance Date From
+e98e1d01-c38b-11ea-9026-02e7594ce0a0,Location
+52bb1e86-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Certainty 
+52bb1e87-fbea-11e9-b345-06f597a7d5ce,Disturbance Cause Belief
+52bb1e88-fbea-11e9-b345-06f597a7d5ce,Disturbance Date Occurred Before
+52bb1e89-fbea-11e9-b345-06f597a7d5ce,Effect Certainty
+52bb1e8a-fbea-11e9-b345-06f597a7d5ce,Effect Type
+7ef3aa74-fbf0-11e9-b345-06f597a7d5ce,Assessment Summary
+a4126d82-b0b7-11ea-9b1f-02e7594ce0a0,Comments on Relationship to Heritage Place
+aea63579-f995-11e9-b345-06f597a7d5ce,Damage Assessment
+aea6357c-f995-11e9-b345-06f597a7d5ce,Recommendation Type
+aea63583-f995-11e9-b345-06f597a7d5ce,Recommendation Plan
+aea63589-f995-11e9-b345-06f597a7d5ce,Priority Assignment
+aea63592-f995-11e9-b345-06f597a7d5ce,Intervention Activity Type
+aea63597-f995-11e9-b345-06f597a7d5ce,Priority Type 
+b23d3647-f995-11e9-b345-06f597a7d5ce,Threat and Risk Assessment
+b23d364a-f995-11e9-b345-06f597a7d5ce,Mitigation Priority Assignment
+b23d364c-f995-11e9-b345-06f597a7d5ce,Threat Probability Type
+b23d364e-f995-11e9-b345-06f597a7d5ce,Secondary Threat Type
+1cecc89a-f65c-11ea-afe6-0a5a9a4f6ef7,SH Date From
+b23d364f-f995-11e9-b345-06f597a7d5ce,Threat Type
+b23d3650-f995-11e9-b345-06f597a7d5ce,Mitigation Priority Type
+b23d3654-f995-11e9-b345-06f597a7d5ce,Threat Extent Type
+b23d3655-f995-11e9-b345-06f597a7d5ce,Risk Plan
+b23d365a-f995-11e9-b345-06f597a7d5ce,Threat Event
+b23d365c-f995-11e9-b345-06f597a7d5ce,Threat Severity Type
+d7636da1-f995-11e9-b345-06f597a7d5ce,Modification and Construction
+d7636da4-f995-11e9-b345-06f597a7d5ce,Construction Note
+b23d3662-f995-11e9-b345-06f597a7d5ce,Mitigation Strategy Type
+b5351eeb-f995-11e9-b345-06f597a7d5ce,Overall Condition Assessment
+b5351eee-f995-11e9-b345-06f597a7d5ce,Overall Condition Remarks
+b5351ef1-f995-11e9-b345-06f597a7d5ce,Next Assessment Date Type
+b5351ef3-f995-11e9-b345-06f597a7d5ce,Overall Condition Remarks Type
+34cfea37-c2c0-11ea-9026-02e7594ce0a0,Depositional Process
+1cecc89b-f65c-11ea-afe6-0a5a9a4f6ef7,Alternative Temporal Reference Systems
+99f876ce-8f75-11ea-a6a6-02e7594ce0a0,Overall Geoarchaeological Certainty Value
+b5351ef4-f995-11e9-b345-06f597a7d5ce,Overall Condition Type
+b5351ef5-f995-11e9-b345-06f597a7d5ce,Condition Remarks Assignment 
+b580a298-c81b-11ea-a292-02e7594ce0a0,Damage Assessment Assessor
+b6f1dbfc-b0af-11ea-9b1f-02e7594ce0a0,Resource Orientation Type
+b84330ae-6f83-11ea-b4d0-02e7594ce0a0,Heritage Place
+b9f03aa2-fa3d-11e9-b345-06f597a7d5ce,Modification 
+bea3f5f2-fbf0-11e9-b345-06f597a7d5ce,Assessment Activity
+c00ca7af-fa3d-11e9-b345-06f597a7d5ce,Modification Timespan
+c00ca7b2-fa3d-11e9-b345-06f597a7d5ce,Modification Date
+c07dab2a-fbf0-11e9-b345-06f597a7d5ce,Assessment Investigator
+e98e1d04-c38b-11ea-9026-02e7594ce0a0,ACTOR ID
+c1a14deb-fa3d-11e9-b345-06f597a7d5ce,Modification Description
+d0f5f60e-cc08-11ea-a292-02e7594ce0a0,Investigator Role Type
+d583c0f3-f995-11e9-b345-06f597a7d5ce,Measurements 
+d583c0f6-f995-11e9-b345-06f597a7d5ce,Dimension
+d583c0f8-f995-11e9-b345-06f597a7d5ce,Dimension Type
+d583c0fa-f995-11e9-b345-06f597a7d5ce,Measurement Unit
+d583c0fb-f995-11e9-b345-06f597a7d5ce,Measurement Source Type
+d583c0fd-f995-11e9-b345-06f597a7d5ce,Measurement Number
+0eef8b37-8fa4-11ea-a6a6-02e7594ce0a0,Surficial Geology Type
+0eef8b38-8fa4-11ea-a6a6-02e7594ce0a0,Land Cover Assessment Date
+0eef8b3a-8fa4-11ea-a6a6-02e7594ce0a0,Depositional Process
+d7636dab-f995-11e9-b345-06f597a7d5ce,Construction Technique Type
+dbacac2a-fbf0-11e9-b345-06f597a7d5ce,Assessment Investigator Name 
+dfccff79-fa4f-11e9-b345-06f597a7d5ce,Observed Vulnerability Exposure
+dfccff7d-fa4f-11e9-b345-06f597a7d5ce,Exposure
+dfccff7e-fa4f-11e9-b345-06f597a7d5ce,Vulnerability Type
+dfed5e2f-fa3d-11e9-b345-06f597a7d5ce,Modification Type
+ecb096d1-0a18-11eb-a232-02e7594ce0a0,Overall Disturbance Extent Type
+ecb096d4-0a18-11eb-a232-02e7594ce0a0,Overall Damage Severity Type
+ecb096d7-0a18-11eb-a232-02e7594ce0a0,Damage Trend Type
+ecb096da-0a18-11eb-a232-02e7594ce0a0,Overall Damage Evaluations
+f1600708-07c3-11eb-a232-02e7594ce0a0,Mitigation Activity Type
+f1daeebb-fa4e-11e9-b345-06f597a7d5ce,Potential Impact Type
+f6235ff0-f992-11e9-b345-06f597a7d5ce,Detailed Condition Assessment
+fe048bf0-80dc-11ea-a6a6-02e7594ce0a0,File Upload
+f9587704-b0ae-11ea-9b1f-02e7594ce0a0,Geometric Place Expression
+34cfea42-c2c0-11ea-9026-02e7594ce0a0,Maximum Depth/Min Elevation
+5297faa5-8e16-11ea-a6a6-02e7594ce0a0,Assessment Summary
+6c572104-c7f2-11ea-a292-02e7594ce0a0,Geometric Place Expression
+947ccaa0-1ea5-11eb-af98-02e7594ce0a0,Assessment Activity
+34cfea63-c2c0-11ea-9026-02e7594ce0a0,Threat Probability 
+34cfea64-c2c0-11ea-9026-02e7594ce0a0,Recommendation Type
+34cfea65-c2c0-11ea-9026-02e7594ce0a0,Disturbance Date From
+34cfea6f-c2c0-11ea-9026-02e7594ce0a0,Condition State
+0800960e-abf7-11ea-b04a-02e7594ce0a0,Marine Isotope Stage Certainty
+0863ccf8-8f76-11ea-a6a6-02e7594ce0a0,Quaternary Divisions Belief
+0eef8b1b-8fa4-11ea-a6a6-02e7594ce0a0,Land Cover
+0eef8b1e-8fa4-11ea-a6a6-02e7594ce0a0,Land Cover Type
+0eef8b21-8fa4-11ea-a6a6-02e7594ce0a0,Geology
+0eef8b24-8fa4-11ea-a6a6-02e7594ce0a0,Bedrock Geology
+0eef8b27-8fa4-11ea-a6a6-02e7594ce0a0,Marine Environment
+0eef8b2a-8fa4-11ea-a6a6-02e7594ce0a0,Surficial Geology
+0eef8b2d-8fa4-11ea-a6a6-02e7594ce0a0,Topography
+0eef8b30-8fa4-11ea-a6a6-02e7594ce0a0,Environment Assessment
+0eef8b33-8fa4-11ea-a6a6-02e7594ce0a0,Bedrock Geology Type
+0eef8b34-8fa4-11ea-a6a6-02e7594ce0a0,Topography Type
+0eef8b35-8fa4-11ea-a6a6-02e7594ce0a0,Wave Climate
+0eef8b36-8fa4-11ea-a6a6-02e7594ce0a0,Land Cover Assessment
+ea8af473-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Event
+38cff73b-c77b-11ea-a292-02e7594ce0a0,Cultural Period Type
+34cfea40-c2c0-11ea-9026-02e7594ce0a0,Minimum Depth/Max Elevation
+0eef8b3e-8fa4-11ea-a6a6-02e7594ce0a0,Tidal Range
+0eef8b3f-8fa4-11ea-a6a6-02e7594ce0a0,Fetch Type
+12afd3e2-8f9d-11ea-a6a6-02e7594ce0a0,Feature Landform Type
+1cecc895-f65c-11ea-afe6-0a5a9a4f6ef7,Geoarchaeological Timespace
+1cecc898-f65c-11ea-afe6-0a5a9a4f6ef7,Geoarchaeological From Date
+1cecc899-f65c-11ea-afe6-0a5a9a4f6ef7,AH Date From
+5297faa8-8e16-11ea-a6a6-02e7594ce0a0,Geoarchaeology
+c86fdfe8-cb7e-11ea-a292-02e7594ce0a0,COMPONENT ID
+1cecc89c-f65c-11ea-afe6-0a5a9a4f6ef7,BP Date From
+947ccaa6-1ea5-11eb-af98-02e7594ce0a0,Information Resource Acquisition Date
+1cecc89d-f65c-11ea-afe6-0a5a9a4f6ef7,SH Date to
+1cecc89e-f65c-11ea-afe6-0a5a9a4f6ef7,Geoarchaeological To Date
+1cecc89f-f65c-11ea-afe6-0a5a9a4f6ef7,AH Date To
+1cecc8a0-f65c-11ea-afe6-0a5a9a4f6ef7,BP Date To
+1d53af1c-8f75-11ea-a6a6-02e7594ce0a0,Geoarchaeology Assessment
+1d7c082e-8f7d-11ea-a6a6-02e7594ce0a0,Source of Evidence
+267ece34-8fa0-11ea-a6a6-02e7594ce0a0,Feature Interpretation Type
+2ce1f3f6-98db-11ea-b04a-02e7594ce0a0,Resource Name
+2ce1f3fc-98db-11ea-b04a-02e7594ce0a0,Description Assignment
+2ce1f402-98db-11ea-b04a-02e7594ce0a0,Resource Summary
+2ce1f406-98db-11ea-b04a-02e7594ce0a0,General Description
+2ce1f408-98db-11ea-b04a-02e7594ce0a0,General Description Type
+2ce1f40d-98db-11ea-b04a-02e7594ce0a0,Name Type
+2e24cefe-8f7d-11ea-a6a6-02e7594ce0a0,Source of Evidence Type
+2e872836-8f9d-11ea-a6a6-02e7594ce0a0,Feature Landform Arrangement Type
+301e96cc-8fa0-11ea-a6a6-02e7594ce0a0,Feature Interpretation Type Certainty
+3650a276-8f76-11ea-a6a6-02e7594ce0a0,Quaternary Divisions
+40c49e8c-cc08-11ea-a292-02e7594ce0a0,Investigator Role Type
+42402ac4-aa39-11ea-b04a-02e7594ce0a0,Feature Sediment Transition
+947cca97-1ea5-11eb-af98-02e7594ce0a0,GE Imagery Acquisition Date
+43501e28-8f7d-11ea-a6a6-02e7594ce0a0,Related Information Resource
+4beffbc2-8f76-11ea-a6a6-02e7594ce0a0,Quaternary Division Certainty
+4d3de2a6-8f9d-11ea-a6a6-02e7594ce0a0,Feature Landform Number Type
+4f7003ee-99a5-11ea-b04a-02e7594ce0a0,Process Indicator/Evidence of
+5297fa9f-8e16-11ea-a6a6-02e7594ce0a0,GEOARCH ID
+5297faa9-8e16-11ea-a6a6-02e7594ce0a0,Assessment Investigator - Actor
+61ad111d-c7f1-11ea-a292-02e7594ce0a0,Geography
+61ad1121-c7f1-11ea-a292-02e7594ce0a0,Grid ID
+61ad1127-c7f1-11ea-a292-02e7594ce0a0,Modern Country Territory
+61ad1129-c7f1-11ea-a292-02e7594ce0a0,Country Type
+6c5720fd-c7f2-11ea-a292-02e7594ce0a0,Geometry
+6c572100-c7f2-11ea-a292-02e7594ce0a0,Geometry Location Observation
+6c572101-c7f2-11ea-a292-02e7594ce0a0,Geometry Qualifier
+6c572102-c7f2-11ea-a292-02e7594ce0a0,Geometry Extent Certainty
+6c572103-c7f2-11ea-a292-02e7594ce0a0,Spatial Coordinates Ref System
+6c572105-c7f2-11ea-a292-02e7594ce0a0,Location Certainty
+6d3e2674-8f9d-11ea-a6a6-02e7594ce0a0,Feature Landform Type Certainty
+73f48686-99a5-11ea-b04a-02e7594ce0a0,Indicator Belief
+81f2e5aa-8f75-11ea-a6a6-02e7594ce0a0,Geoarchaeology Certainty Observation
+8a202944-c7f2-11ea-a292-02e7594ce0a0,Maritime Region
+8af31e3c-b9f4-11ea-9b1f-02e7594ce0a0,Related Heritage Place
+8b38c406-99a5-11ea-b04a-02e7594ce0a0,Process Indicator Certainty
+92f84dd8-8f9b-11ea-a6a6-02e7594ce0a0,Geoarchaeology Feature Assessment
+947cca9a-1ea5-11eb-af98-02e7594ce0a0,Imagery Acquisition Date
+947cca9d-1ea5-11eb-af98-02e7594ce0a0,Information Resource
+947ccaa3-1ea5-11eb-af98-02e7594ce0a0,Assessment Activity Date
+947ccaa4-1ea5-11eb-af98-02e7594ce0a0,Assessment Activity Type
+947ccaa5-1ea5-11eb-af98-02e7594ce0a0,Google Earth Assessment
+8fc30f34-cb7e-11ea-a292-02e7594ce0a0,Component Classification
+9e035d58-99a5-11ea-b04a-02e7594ce0a0,Process Indicator/Evidence of Type
+a107cddf-b14e-11ea-9b1f-02e7594ce0a0,Depth/Elevation
+a107cde2-b14e-11ea-9b1f-02e7594ce0a0,Datum Description/EPSG code
+d502562b-cb90-11ea-a292-02e7594ce0a0,Material
+a107cde3-b14e-11ea-9b1f-02e7594ce0a0,Datum Type
+a107cde4-b14e-11ea-9b1f-02e7594ce0a0,Minimum Depth/Max Elevation
+a107cde5-b14e-11ea-9b1f-02e7594ce0a0,Datum
+a107cde6-b14e-11ea-9b1f-02e7594ce0a0,Maximum Depth/Min Elevation
+a798faf0-c7f2-11ea-a292-02e7594ce0a0,Maritime Region Type
+aa130451-ca9b-11ea-a292-02e7594ce0a0,Designation
+aa130454-ca9b-11ea-a292-02e7594ce0a0,Designation Event Timespan
+aa130455-ca9b-11ea-a292-02e7594ce0a0,Designation To Date
+aa130456-ca9b-11ea-a292-02e7594ce0a0,Designation From Date
+b3cbce96-abf6-11ea-b04a-02e7594ce0a0,Marine Isotope Stages Belief
+ba6d81d0-8f9b-11ea-a6a6-02e7594ce0a0,Feature Landform Belief
+bfd9064c-8f75-11ea-a6a6-02e7594ce0a0,General Date
+c04789e4-8f9f-11ea-a6a6-02e7594ce0a0,Feature Sediment Type
+cf17a202-c7f2-11ea-a292-02e7594ce0a0,Overall Location Type
+d2d5fcac-8f9b-11ea-a6a6-02e7594ce0a0,Feature Sediment Belief
+e234ac56-b9f4-11ea-9b1f-02e7594ce0a0,Related Geoarchaeology/Palaeolandscape
+ea8af467-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Assignment
+ea8af46a-b15a-11ea-9b1f-02e7594ce0a0,Damage State
+ea8af46d-b15a-11ea-9b1f-02e7594ce0a0,Intervention Activity Type
+ea8af470-b15a-11ea-9b1f-02e7594ce0a0,Estimated Damage Extent
+ea8af476-b15a-11ea-9b1f-02e7594ce0a0,Damage Observation 
+ea8af479-b15a-11ea-9b1f-02e7594ce0a0,Recommendation Plan
+ea8af47c-b15a-11ea-9b1f-02e7594ce0a0,Priority Assignment
+ea8af47f-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Event Timespan
+ea8af482-b15a-11ea-9b1f-02e7594ce0a0,Overall Condition State Type
+ea8af485-b15a-11ea-9b1f-02e7594ce0a0,Detailed Condition Assessments
+ea8af488-b15a-11ea-9b1f-02e7594ce0a0,Threat Inference Making
+ea8af48b-b15a-11ea-9b1f-02e7594ce0a0,Condition Assessment
+ea8af48e-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Certainty 
+ea8af48f-b15a-11ea-9b1f-02e7594ce0a0,Damage Extent Type
+ea8af490-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Belief
+ea8af491-b15a-11ea-9b1f-02e7594ce0a0,Effect Type
+ea8af492-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Date Occurred Before
+ea8af493-b15a-11ea-9b1f-02e7594ce0a0,Threat Inference Making Assessor
+ea8af494-b15a-11ea-9b1f-02e7594ce0a0,Effect Certainty
+ea8af495-b15a-11ea-9b1f-02e7594ce0a0,Threat Probability 
+ea8af496-b15a-11ea-9b1f-02e7594ce0a0,Recommendation Type
+ea8af497-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Date From
+ea8af498-b15a-11ea-9b1f-02e7594ce0a0,Threat Belief
+ea8af499-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Category Type
+ea8af49a-b15a-11ea-9b1f-02e7594ce0a0,Condition State
+ea8af49b-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Assignment Assessor
+ea8af49c-b15a-11ea-9b1f-02e7594ce0a0,Threat Inference Making Assessor Name - Actor
+ea8af49d-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Type 
+ea8af49e-b15a-11ea-9b1f-02e7594ce0a0,Threat Category
+ea8af49f-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Date To 
+ea8af4a0-b15a-11ea-9b1f-02e7594ce0a0,Threat Cause Type
+ea8af4a1-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Cause Assignment Assessor Name - Actor
+ea8af4a2-b15a-11ea-9b1f-02e7594ce0a0,Disturbance Date Occurred On 
+ea8af4a3-b15a-11ea-9b1f-02e7594ce0a0,Priority Type
+f118a2a0-8f9b-11ea-a6a6-02e7594ce0a0,Feature Interpretation Belief
+e98e1d0e-c38b-11ea-9026-02e7594ce0a0,Role Type Date To
+f264eb92-abf6-11ea-b04a-02e7594ce0a0,Marine Isotope Stages
+f4445434-8f9f-11ea-a6a6-02e7594ce0a0,Feature Sediment Type Certainty
+77d18972-7428-11ea-b4d0-02e7594ce0a0,Grid Square
+b3628db0-742d-11ea-b4d0-02e7594ce0a0,Grid ID
+e98e1cfe-c38b-11ea-9026-02e7594ce0a0,Appellation
+7248e0d0-ca96-11ea-a292-02e7594ce0a0,Grid Square Geometric Place Expression
+6bde2541-cb7e-11ea-a292-02e7594ce0a0,Geometric Place Expression
+057d2d6a-cc32-11ea-a292-02e7594ce0a0,Heritage Place
+2b76d254-ce72-11ea-a292-02e7594ce0a0,Detailed Condition Assessment
+5b3489b9-cb8f-11ea-a292-02e7594ce0a0,Measurement
+5b3489bc-cb8f-11ea-a292-02e7594ce0a0,Measurements
+5b3489bf-cb8f-11ea-a292-02e7594ce0a0,Dimension 
+5b3489c0-cb8f-11ea-a292-02e7594ce0a0,Measurement Number
+5b3489c1-cb8f-11ea-a292-02e7594ce0a0,Measurement Source Type 
+5b3489c2-cb8f-11ea-a292-02e7594ce0a0,Dimension Type
+5b3489c6-cb8f-11ea-a292-02e7594ce0a0,Measurement Unit
+6bde253d-cb7e-11ea-a292-02e7594ce0a0,Geometry
+6bde2540-cb7e-11ea-a292-02e7594ce0a0,Spatial Coordinates Ref System
+6bde2542-cb7e-11ea-a292-02e7594ce0a0,Geometry Location Observation
+6bde2543-cb7e-11ea-a292-02e7594ce0a0,Location Certainty
+6c4f0702-c381-11ea-9026-02e7594ce0a0,Built Component
+8fc30f31-cb7e-11ea-a292-02e7594ce0a0,Built Component Observation
+9a895017-cb8e-11ea-a292-02e7594ce0a0,Assessment Activity
+8fc30f35-cb7e-11ea-a292-02e7594ce0a0,Component Type
+8fc30f36-cb7e-11ea-a292-02e7594ce0a0,Detailed Condition Assessment
+e98e1d0f-c38b-11ea-9026-02e7594ce0a0,End of Existence
+8fc30f37-cb7e-11ea-a292-02e7594ce0a0,Component Orientation
+8fc30f38-cb7e-11ea-a292-02e7594ce0a0,Built Component Image
+9a89500f-cb8e-11ea-a292-02e7594ce0a0,Assessment Summary
+9a895012-cb8e-11ea-a292-02e7594ce0a0,Assessment Activity Date
+9a895013-cb8e-11ea-a292-02e7594ce0a0,Assessment Activity Type
+9a895014-cb8e-11ea-a292-02e7594ce0a0,Imagery Acquisition Date
+9a895015-cb8e-11ea-a292-02e7594ce0a0,Information Resource
+9a895016-cb8e-11ea-a292-02e7594ce0a0,Assessment Investigator - Actor
+bb695340-cc07-11ea-a292-02e7594ce0a0,Investigator Role Type
+d502562e-cb90-11ea-a292-02e7594ce0a0,Material Class
+d502562f-cb90-11ea-a292-02e7594ce0a0,Construction Technique
+d5025630-cb90-11ea-a292-02e7594ce0a0,Material Type
+dc1d7248-cb7f-11ea-a292-02e7594ce0a0,Built Component Comments
+0b14d416-c38c-11ea-9026-02e7594ce0a0,Cultural Period
+4f1478a8-cc09-11ea-a292-02e7594ce0a0,Investigator Role Type
+69ed71a0-c38c-11ea-9026-02e7594ce0a0,Role Type Date From
+821dd7f6-c38c-11ea-9026-02e7594ce0a0,Role Type Date To
+e98e1cef-c38b-11ea-9026-02e7594ce0a0,External XRef
+e98e1cf2-c38b-11ea-9026-02e7594ce0a0,Related Information Resource
+e98e1cf5-c38b-11ea-9026-02e7594ce0a0,Lifespan
+e98e1cf8-c38b-11ea-9026-02e7594ce0a0,Description Assignment
+e98e1cfb-c38b-11ea-9026-02e7594ce0a0,Person/Organization Photo
+e98e1d08-c38b-11ea-9026-02e7594ce0a0,Appellation Type
+e98e1d09-c38b-11ea-9026-02e7594ce0a0,Beginning of Existence
+e98e1d0a-c38b-11ea-9026-02e7594ce0a0,Person-Organization
+e98e1d0b-c38b-11ea-9026-02e7594ce0a0,Appellation Transliteration
+e98e1d0c-c38b-11ea-9026-02e7594ce0a0,Role Type Date From
+e98e1d0d-c38b-11ea-9026-02e7594ce0a0,Actor Role Type
+e98e1d10-c38b-11ea-9026-02e7594ce0a0,End Date of Existence
+e98e1d11-c38b-11ea-9026-02e7594ce0a0,End of Existence Time Span
+e98e1d12-c38b-11ea-9026-02e7594ce0a0,Start Date of Existence
+e98e1d13-c38b-11ea-9026-02e7594ce0a0,External Identifier Type
+e98e1d14-c38b-11ea-9026-02e7594ce0a0,Description Type
+e98e1d15-c38b-11ea-9026-02e7594ce0a0,Beginning of Existence Time Span
+e98e1d16-c38b-11ea-9026-02e7594ce0a0,Country Type
+e98e1d17-c38b-11ea-9026-02e7594ce0a0,Modern Country Territory
+e98e1d18-c38b-11ea-9026-02e7594ce0a0,Geometric Place Expression
+e98e1d19-c38b-11ea-9026-02e7594ce0a0,Description
+e98e1d1a-c38b-11ea-9026-02e7594ce0a0,External Source
+e98e1d1b-c38b-11ea-9026-02e7594ce0a0,Keyword
+e98e1d1c-c38b-11ea-9026-02e7594ce0a0,Address
+e98e1d1d-c38b-11ea-9026-02e7594ce0a0,Administrative Division 
+34cfea74-c2c0-11ea-9026-02e7594ce0a0,Imagery Acquisition Date
+d9abdfe0-c6a3-11ea-a292-02e7594ce0a0,Designation From Date
+34cfea10-c2c0-11ea-9026-02e7594ce0a0,Detailed Condition Assessments
+34cfe9e3-c2c0-11ea-9026-02e7594ce0a0,Heritage Place Resource Instance
+34cfe9fe-c2c0-11ea-9026-02e7594ce0a0,Site Feature Interpretation Belief
+34cfe9ef-c2c0-11ea-9026-02e7594ce0a0,Heritage Place Type
+34cfe9f2-c2c0-11ea-9026-02e7594ce0a0,Measurements
+34cfe9b6-c2c0-11ea-9026-02e7594ce0a0,Geography
+34cfe9b9-c2c0-11ea-9026-02e7594ce0a0,Condition Assessment
+34cfea1c-c2c0-11ea-9026-02e7594ce0a0,Geology
+34cfea13-c2c0-11ea-9026-02e7594ce0a0,Site Feature Assignment
+34cfea9b-c2c0-11ea-9026-02e7594ce0a0,Datum Type
+34cfea9c-c2c0-11ea-9026-02e7594ce0a0,Tidal Range
+34cfea9d-c2c0-11ea-9026-02e7594ce0a0,Bedrock Geology Type
+d9abdfdb-c6a3-11ea-a292-02e7594ce0a0,Designation
+34cfea72-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Assignment Assessor
+34cfea73-c2c0-11ea-9026-02e7594ce0a0,Resource Orientation
+34cfea47-c2c0-11ea-9026-02e7594ce0a0,Measurement Number
+5348cf6a-c2c5-11ea-9026-02e7594ce0a0,Geometry Location Observation
+34cfea43-c2c0-11ea-9026-02e7594ce0a0,Country Type
+34cfea22-c2c0-11ea-9026-02e7594ce0a0,Surficial Geology
+34cfea28-c2c0-11ea-9026-02e7594ce0a0,Topography
+34cfea2b-c2c0-11ea-9026-02e7594ce0a0,Bedrock Geology
+34cfea2e-c2c0-11ea-9026-02e7594ce0a0,Assessment Summary
+34cfea91-c2c0-11ea-9026-02e7594ce0a0,General Description Type
+34cfea92-c2c0-11ea-9026-02e7594ce0a0,Disturbance Date Occurred Before
+34cfea93-c2c0-11ea-9026-02e7594ce0a0,Land Cover Type
+e3cc8c5b-c772-11ea-a292-02e7594ce0a0,Disturbance Date Occurred On 
+34cfe9b3-c2c0-11ea-9026-02e7594ce0a0,Archaeological Assessment 
+34cfea34-c2c0-11ea-9026-02e7594ce0a0,Information Resource
+34cfea36-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Assignment Assessor Name - Actor
+34cfea39-c2c0-11ea-9026-02e7594ce0a0,Topography Type
+34cfea3c-c2c0-11ea-9026-02e7594ce0a0,Material Class
+38cff73e-c77b-11ea-a292-02e7594ce0a0,Date Inference Making Actor Name
+34cfea68-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Category Type
+34cfe9ce-c2c0-11ea-9026-02e7594ce0a0,Damage Observation 
+34cfe9dd-c2c0-11ea-9026-02e7594ce0a0,Resource Name
+38cff738-c77b-11ea-a292-02e7594ce0a0,Cultural Period Certainty
+34cfea75-c2c0-11ea-9026-02e7594ce0a0,Threat Inference Making Assessor Name - Actor
+34cfea76-c2c0-11ea-9026-02e7594ce0a0,Threat Category
+34cfea9e-c2c0-11ea-9026-02e7594ce0a0,Surficial Geology Type
+38cff731-c77b-11ea-a292-02e7594ce0a0,Cultural Sub-period Belief 
+38cff737-c77b-11ea-a292-02e7594ce0a0,Date Inference Making Actor
+34cfea4a-c2c0-11ea-9026-02e7594ce0a0,Heritage Place Function
+34cfea4c-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Belief
+bcd3a8ae-0404-11eb-a11c-0a5a9a4f6ef7,Google Earth Assessment
+34cfea61-c2c0-11ea-9026-02e7594ce0a0,Land Cover Assessment Date
+34cfea62-c2c0-11ea-9026-02e7594ce0a0,Site Feature Interpretation Number Type
+34cfea78-c2c0-11ea-9026-02e7594ce0a0,Administrative Division 
+34cfea79-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Type 
+34cfea7a-c2c0-11ea-9026-02e7594ce0a0,Disturbance Date To 
+34cfea7b-c2c0-11ea-9026-02e7594ce0a0,Threat Cause Type
+34cfea7c-c2c0-11ea-9026-02e7594ce0a0,Measurement Source Type 
+5348cf6c-c2c5-11ea-9026-02e7594ce0a0,Geometry Extent Certainty
+173ff15a-c5fb-11ea-9026-02e7594ce0a0,BP Date To
+e265f832-f375-11ea-afe6-0a5a9a4f6ef7,FEATURE_ASSIGNMENT_INVESTIGATOR_NAME
+e3cc8c57-c772-11ea-a292-02e7594ce0a0,Disturbance Event Timespan
+e3cc8c5a-c772-11ea-a292-02e7594ce0a0,Disturbance Date Occurred Before
+34cfea0a-c2c0-11ea-9026-02e7594ce0a0,Intervention Activity Type
+34cfe9a4-c2c0-11ea-9026-02e7594ce0a0,Archaeological Certainty Observation
+34cfea3f-c2c0-11ea-9026-02e7594ce0a0,Fetch Type
+34cfe9d4-c2c0-11ea-9026-02e7594ce0a0,Recommendation Plan
+34cfe9d7-c2c0-11ea-9026-02e7594ce0a0,Priority Assignment
+34cfe9da-c2c0-11ea-9026-02e7594ce0a0,Disturbance Event Timespan
+34cfe9f5-c2c0-11ea-9026-02e7594ce0a0,Overall Condition State Type
+34cfe992-c2c0-11ea-9026-02e7594ce0a0,EAMENA ID
+34cfe9e6-c2c0-11ea-9026-02e7594ce0a0,Overall Site Morphology Type
+34cfe9e9-c2c0-11ea-9026-02e7594ce0a0,Site Feature Arrangement Type
+34cfe99e-c2c0-11ea-9026-02e7594ce0a0,Disturbance Cause Assignment
+34cfea4e-c2c0-11ea-9026-02e7594ce0a0,Material Type
+34cfea51-c2c0-11ea-9026-02e7594ce0a0,Overall Archaeological Certainty Value 
+34cfea66-c2c0-11ea-9026-02e7594ce0a0,Threat Belief
+38cff734-c77b-11ea-a292-02e7594ce0a0,Cultural Period Belief
+34cfea95-c2c0-11ea-9026-02e7594ce0a0,Cadastral Reference
+34cfe9aa-c2c0-11ea-9026-02e7594ce0a0,Damage State
+34cfe9ad-c2c0-11ea-9026-02e7594ce0a0,Heritage Place Assignment 
+34cfea86-c2c0-11ea-9026-02e7594ce0a0,Dimension Type
+34cfea87-c2c0-11ea-9026-02e7594ce0a0,Administrative Division Type
+34cfea97-c2c0-11ea-9026-02e7594ce0a0,Name Type
+34cfea98-c2c0-11ea-9026-02e7594ce0a0,Modern Country Territory
+b7314be2-c5fa-11ea-9026-02e7594ce0a0,BP Date From
+b9643302-0407-11eb-a11c-0a5a9a4f6ef7,GE Imagery Acquisition Date
+3d218500-c385-11ea-9026-02e7594ce0a0,Built Component
+d9abdfdf-c6a3-11ea-a292-02e7594ce0a0,Designation To Date
+d2e1ab96-cc05-11ea-a292-02e7594ce0a0,Investigator Role Type
+7deb8fcc-c6a5-11ea-a292-02e7594ce0a0,Restricted Access Record Designation
+97a2c1fc-cb86-11ea-a292-02e7594ce0a0,SH Date to
+a5eb59b4-0406-11eb-a11c-0a5a9a4f6ef7,Information Resource Acquisition Date
+affb15b2-f375-11ea-afe6-0a5a9a4f6ef7,DAMAGE_TREND_TYPE
+34cfea8d-c2c0-11ea-9026-02e7594ce0a0,Datum Description/EPSG code
+34cfea8e-c2c0-11ea-9026-02e7594ce0a0,Damage Extent Type
+34cfea8f-c2c0-11ea-9026-02e7594ce0a0,Address Type
+34cfea90-c2c0-11ea-9026-02e7594ce0a0,Effect Type
+3080eebe-c2c5-11ea-9026-02e7594ce0a0,Geometry
+d9abdfde-c6a3-11ea-a292-02e7594ce0a0,Designation Event Timespan
+5348cf6d-c2c5-11ea-9026-02e7594ce0a0,Spatial Coordinates Ref System
+5435f2ee-c5fb-11ea-9026-02e7594ce0a0,AH Date To
+651d5cc6-c5df-11ea-9026-02e7594ce0a0,Alternative Temporal Reference Systems
+ce842cdc-c2c7-11ea-9026-02e7594ce0a0,Geometry Qualifier
+34cfea9a-c2c0-11ea-9026-02e7594ce0a0,Site Feature Form Type
+34cfea8a-c2c0-11ea-9026-02e7594ce0a0,Assessment Investigator - Actor
+5348cf67-c2c5-11ea-9026-02e7594ce0a0,Geometric Place Expression
