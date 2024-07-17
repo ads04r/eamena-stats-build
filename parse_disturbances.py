@@ -72,7 +72,12 @@ with open(os.path.join(data_path, 'disturbances.csv'), 'r') as fp:
 					if not k in item['data']:
 						item['data'][km] = []
 					if data[k] in map:
-						item['data'][km].append(map[data[k]].strip())
+						text = map[data[k]].strip()
+						if text == 'Unknown':
+							continue
+						if text == 'No Visible/Known':
+							continue
+						item['data'][km].append(text)
 			if 'Disturbance Cause Type' in item['data']:
 				item['disturbances'] = item['data']['Disturbance Cause Type']
 			del(item['tiledata'])

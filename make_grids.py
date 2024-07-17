@@ -45,13 +45,13 @@ for gridk in grid_data.keys():
 	for item in grid_data[grid_id]:
 		uuid = item['ID']
 		tiles = []
-		dist = []
+		item['Disturbances'] = []
 		if uuid in data:
 			tiles = data[uuid]
 		if uuid in disturbances:
-			dist = disturbances[uuid]
+			if 'disturbances' in disturbances[uuid]:
+				item['Disturbances'] = disturbances[uuid]['disturbances']
 		item['Tiles'] = tiles
-		item['Disturbances'] = dist
 		ret['sites'].append(item)
 	with open(os.path.join(docs_path, grid_id + '.md'), 'w') as fp:
 		fp.write(template.replace("%%%", grid_id))
