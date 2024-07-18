@@ -32,7 +32,7 @@ with open(os.path.join(data_path, 'tiles.csv'), 'r') as fp:
 		id = item['resourceinstanceid']
 		if not id in data:
 			data[id] = []
-		k = item['name']
+		k = item['name'].split(' / ')[0]
 		v = int(item['tiles'])
 		data[id].append([k, v])
 
