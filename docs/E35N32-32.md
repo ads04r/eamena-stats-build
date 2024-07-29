@@ -118,11 +118,11 @@ const site_sel = view(Inputs.table(grid_data['sites'], {
     }))
   }</div>
 
-  <h2>Damage Causes</h2>
+  <h2>Disturbance Causes</h2>
 
   <div class="card">${
     resize((width) => Plot.plot({
-        label: "Damage Assessment",
+        label: "Disturbance Causes",
         marginLeft: 250,
         marginRight: 30,
         width: width,
