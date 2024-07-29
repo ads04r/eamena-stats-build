@@ -4,6 +4,7 @@ docs/.observablehq/cache/
 node_modules/
 yarn-error.log
 docs/data/*.json
+docs/data/grids/*.json
 docs/data/tiles.csv
 docs/data/disturbances.csv
 build.sh
