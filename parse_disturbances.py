@@ -57,31 +57,33 @@ with open(os.path.join(data_path, 'disturbances.csv'), 'r') as fp:
 		for i in range(0, len(row)):
 			item[h[i]] = row[i]
 
-		if 'tiledata' in item:
-			item['data'] = {}
-			data = json.loads(item['tiledata'])
-			for kk in data.keys():
-				k = str(kk)
-				km = k
-				if km in map:
-					km = map[k].strip()
-				if data[k]:
-					if not isinstance(data[k], str):
-						item['data'][km] = data[k]
+		if not 'tiledata' in item:
+			continue
+
+		item['data'] = {}
+		data = json.loads(item['tiledata'])
+		for kk in data.keys():
+			k = str(kk)
+			km = k
+			if km in map:
+				km = map[k].strip()
+			if data[k]:
+				if not isinstance(data[k], str):
+					item['data'][km] = data[k]
+					continue
+				if not k in item['data']:
+					item['data'][km] = []
+				if data[k] in map:
+					text = map[data[k]].strip()
+					if text == 'Unknown':
 						continue
-					if not k in item['data']:
-						item['data'][km] = []
-					if data[k] in map:
-						text = map[data[k]].strip()
-						if text == 'Unknown':
-							continue
-						if text == 'No Visible/Known':
-							continue
-						item['data'][km].append(text)
-			if 'Disturbance Cause Type' in item['data']:
-				item['disturbances'] = item['data']['Disturbance Cause Type']
-			del(item['tiledata'])
-			ret[item['resourceinstanceid']] = item
+					if text == 'No Visible/Known':
+						continue
+					item['data'][km].append(text)
+		if 'Disturbance Cause Type' in item['data']:
+			item['disturbances'] = item['data']['Disturbance Cause Type']
+		del(item['tiledata'])
+		ret[item['resourceinstanceid']] = item
 
 with open(output_file, 'w') as fp:
-	fp.write(json.dumps(ret))
+	fp.write(json.dumps(ret, indent=4))

@@ -32,7 +32,7 @@ with open(os.path.join(data_path, 'tiles.csv'), 'r') as fp:
 		id = item['resourceinstanceid']
 		if not id in data:
 			data[id] = []
-		k = item['name'].split(' / ')[0]
+		k = item['name'].split(' / ')[0].replace('"', '')
 		v = int(item['tiles'])
 		data[id].append([k, v])
 
@@ -57,3 +57,20 @@ for gridk in grid_data.keys():
 		fp.write(template.replace("%%%", grid_id))
 	with open(os.path.join(data_path, 'grids', grid_id + '.json'), 'w') as fp:
 		fp.write(json.dumps(ret))
+
+#    "38e6731d-7e36-41e4-8155-3e453cc5d79a": {
+#        "resourceinstanceid": "38e6731d-7e36-41e4-8155-3e453cc5d79a",
+#        "data": {
+#            "Disturbance Cause Certainty": [
+#                "High"
+#            ],
+#            "Disturbance Date From": [],
+#            "Disturbance Cause Type": [
+#                "Wind Action"
+#            ],
+#            "Disturbance Date To": []
+#        },
+#        "disturbances": [
+#            "Wind Action"
+#        ]
+#    }
