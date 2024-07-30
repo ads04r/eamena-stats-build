@@ -7,6 +7,8 @@ docs/data/*.json
 docs/data/grids/*.json
 docs/data/tiles.csv
 docs/data/disturbances.csv
+docs/data/geometries.csv
+docs/data/grid_matches.csv
 docs/E*.md
 docs/W*.md
 build.sh
