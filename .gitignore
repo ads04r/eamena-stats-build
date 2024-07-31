@@ -3,6 +3,7 @@ dist/
 docs/.observablehq/cache/
 node_modules/
 yarn-error.log
+docs/errors.md
 docs/data/*.json
 docs/data/grids/*.json
 docs/data/tiles.csv
