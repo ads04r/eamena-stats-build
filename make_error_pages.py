@@ -62,9 +62,10 @@ with open(output_file, 'w') as fp:
 		row = ['', '', '', '', '', '']
 		row[0] = item['Label']
 		if 'ID' in item:
-			row[0] = '<a href="https://database.eamena.org/report/' + item['ID'] + '">' + item['Label'] + '</a>'
+			row[0] = '<nobr><a href="https://database.eamena.org/report/' + item['ID'] + '">' + item['Label'] + '</a></nobr>'
 		if 'Grid' in item:
-			row[1] = flatten(item['Grid'], 'label')
+			grid_id = flatten(item['Grid'], 'label')
+			row[1] = '<nobr>' + grid_id + ' <a href="https://marea-project.github.io/eamena-stats/' + grid_id + '.html">Detail</a></nobr>'
 		if 'Country' in item:
 			row[2] = flatten(item['Country'], 'label')
 		if 'Actor' in item:
