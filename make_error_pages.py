@@ -54,13 +54,15 @@ with open(grid_file, 'r') as fp:
 
 with open(output_file, 'w') as fp:
 
-	fp.write("| EAMENA ID | Grid Square | Country | Name | Role | URL | Information |\n");
-	fp.write("|-----------|-------------|---------|------|------|-----|-------------|\n");
+	fp.write("| EAMENA ID | Grid Square | Country | Name | Role | Information |\n");
+	fp.write("|-----------|-------------|---------|------|------|-------------|\n");
 
 	for item in ret:
 
-		row = ['', '', '', '', '', '', '']
+		row = ['', '', '', '', '', '']
 		row[0] = item['Label']
+		if 'ID' in item:
+			row[0] = '<a href="https://database.eamena.org/report/' + item['ID'] + '">' + item['Label'] + '</a>'
 		if 'Grid' in item:
 			row[1] = flatten(item['Grid'], 'label')
 		if 'Country' in item:
@@ -69,8 +71,6 @@ with open(output_file, 'w') as fp:
 			row[3] = flatten(item['Actor'], 'label')
 		if 'Role' in item:
 			row[4] = flatten(item['Role'], 'label')
-		if 'ID' in item:
-			row[5] = "https://database.eamena.org/report/" + item['ID']
 		if 'problems' in item:
-			row[6] = item['problems'][0]
+			row[5] = item['problems'][0]
 		fp.write("| " + (" | ".join(row)) + " |\n")
