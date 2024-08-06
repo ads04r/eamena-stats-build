@@ -5,7 +5,7 @@ docs_path = os.path.join(base_path, 'docs')
 data_path = os.path.join(docs_path, 'data')
 geo_matches_file = os.path.join(data_path, 'grid_matches.csv')
 grid_file = os.path.join(data_path, 'grid_data.json')
-output_file = os.path.join(docs_path, 'errors.md')
+output_file = os.path.join(data_path, 'errors.csv')
 
 def flatten(item, key='label'):
 	ret = []
@@ -54,24 +54,25 @@ with open(grid_file, 'r') as fp:
 
 with open(output_file, 'w') as fp:
 
-	fp.write("| EAMENA ID | Grid Square | Country | Name | Role | Information |\n");
-	fp.write("|-----------|-------------|---------|------|------|-------------|\n");
+	w = csv.writer(fp, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+	w.writerow(['eamena_id', 'arches_id', 'grid_square', 'country', 'name', 'role', 'problems'])
 
 	for item in ret:
 
-		row = ['', '', '', '', '', '']
+		row = ['', '', '', '', '', '', '[]']
 		row[0] = item['Label']
 		if 'ID' in item:
-			row[0] = '<nobr><a href="https://database.eamena.org/report/' + item['ID'] + '">' + item['Label'] + '</a></nobr>'
+			row[0] = item['Label']
+			row[1] = item['ID']
 		if 'Grid' in item:
 			grid_id = flatten(item['Grid'], 'label')
-			row[1] = '<nobr>' + grid_id + ' <a href="https://marea-project.github.io/eamena-stats/' + grid_id + '.html">Detail</a></nobr>'
+			row[2] = grid_id
 		if 'Country' in item:
-			row[2] = flatten(item['Country'], 'label')
+			row[3] = flatten(item['Country'], 'label')
 		if 'Actor' in item:
-			row[3] = flatten(item['Actor'], 'label')
+			row[4] = flatten(item['Actor'], 'label')
 		if 'Role' in item:
-			row[4] = flatten(item['Role'], 'label')
+			row[5] = flatten(item['Role'], 'label')
 		if 'problems' in item:
-			row[5] = item['problems'][0]
-		fp.write("| " + (" | ".join(row)) + " |\n")
+			row[6] = json.dumps(item['problems'])
+		w.writerow(row)
