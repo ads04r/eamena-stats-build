@@ -10,6 +10,7 @@ docs/data/tiles.csv
 docs/data/disturbances.csv
 docs/data/geometries.csv
 docs/data/grid_matches.csv
+docs/data/errors.csv
 docs/E*.md
 docs/W*.md
 build.sh
