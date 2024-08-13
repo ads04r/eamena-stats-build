@@ -82,6 +82,8 @@ with open(os.path.join(data_path, 'disturbances.csv'), 'r') as fp:
 					item['data'][km].append(text)
 		if 'Disturbance Cause Type' in item['data']:
 			item['disturbances'] = item['data']['Disturbance Cause Type']
+		if 'Overall Damage Severity Type' in item['data']:
+			item['damage'] = item['data']['Overall Damage Severity Type']
 		del(item['tiledata'])
 		ret[item['resourceinstanceid']] = item
 

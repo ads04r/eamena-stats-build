@@ -51,6 +51,8 @@ for gridk in grid_data.keys():
 		if uuid in disturbances:
 			if 'disturbances' in disturbances[uuid]:
 				item['Disturbances'] = disturbances[uuid]['disturbances']
+			if 'damage' in disturbances[uuid]:
+				item['Damage'] = disturbances[uuid]['damage']
 		item['Tiles'] = tiles
 		ret['sites'].append(item)
 	with open(os.path.join(docs_path, grid_id + '.md'), 'w') as fp:
