@@ -11,6 +11,8 @@ docs/data/disturbances.csv
 docs/data/geometries.csv
 docs/data/grid_matches.csv
 docs/data/errors.csv
+docs/data/empty.csv
+docs/data/missing-geometries.csv
 docs/E*.md
 docs/W*.md
 build.sh
