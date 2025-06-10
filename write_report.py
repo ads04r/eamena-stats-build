@@ -7,10 +7,12 @@ front_matter = {'toc': False}
 base_path = os.path.join(os.path.abspath(os.path.dirname(__file__)))
 docs_path = os.path.join(base_path, 'docs')
 data_path = os.path.join(docs_path, 'data')
-output_file = os.path.join(docs_path, 'marea.md')
 summary_file = os.path.join(data_path, 'summary.json')
 disturbances_file = os.path.join(data_path, 'disturbances.json')
 marea_uuid = '270e5b36-4d18-4b6e-a7ee-c49e3d301620'
+
+#output_file = os.path.join(docs_path, 'marea.md')
+output_file = os.path.join(base_path, 'marea-dev.md')
 
 headers = """
 <style>
@@ -40,7 +42,7 @@ with open(summary_file, 'r') as fp:
 	for uid, item in json.load(fp).items():
 		if not 'Role' in item:
 			continue
-		if not 'AddedToDatabase' in item:
+		if not 'Date' in item:
 			continue
 		if not marea_uuid in json.dumps(item['Role']):
 			continue
@@ -57,7 +59,7 @@ with open(summary_file, 'r') as fp:
 			else:
 				countries.append(item['Country'])
 		in_range = False
-		dsa = item['AddedToDatabase']
+		dsa = item['Date']
 		if not isinstance(dsa, list):
 			dsa = [dsa]
 		for ds in dsa:
@@ -68,12 +70,13 @@ with open(summary_file, 'r') as fp:
 			if dt > date_end:
 				continue
 			in_range = True
+			break
 		if not item['ID'] in marea_sites_total:
 			marea_sites_total[item['ID']] = item
 		for grid in grids:
 			if not grid['id'] in marea_grids_total:
 				marea_grids_total[grid['id']] = grid
-		if not in_range:
+		if in_range is False:
 			continue
 		item['Disturbances'] = {}
 		item['UUID'] = uid
@@ -83,12 +86,20 @@ with open(summary_file, 'r') as fp:
 			marea_sites[item['ID']] = item
 		for grid in grids:
 			grid['disturbances'] = {}
+			grid['people'] = {}
+			grid['sites'] = []
 			if not grid['id'] in marea_grids:
 				marea_grids[grid['id']] = grid
+			if not uid in marea_grids[grid['id']]['sites']:
+				marea_grids[grid['id']]['sites'].append(uid)
 		for country in countries:
 			country['disturbances'] = {}
+			country['people'] = {}
+			country['sites'] = []
 			if not country['id'] in marea_countries:
 				marea_countries[country['id']] = country
+			if not uid in marea_countries[country['id']]['sites']:
+				marea_countries[country['id']]['sites'].append(uid)
 		if 'disturbances' in item['Disturbances']:
 			for d in item['Disturbances']['disturbances']:
 				for grid in grids:
@@ -101,9 +112,17 @@ with open(summary_file, 'r') as fp:
 						if not d in marea_countries[country['id']]:
 							marea_countries[country['id']]['disturbances'][d] = 0
 						marea_countries[country['id']]['disturbances'][d] = marea_countries[country['id']]['disturbances'][d] + 1
-
-print(json.dumps(marea_grids, indent=4))
-sys.exit(0)
+		if 'Actor' in item:
+			actors = item['Actor']
+			if not isinstance(actors, list):
+				actors = [item['Actor']]
+			for actor in actors:
+				for grid in grids:
+					if grid['id'] in marea_grids:
+						marea_grids[grid['id']]['people'][actor['id']] = actor
+				for country in countries:
+					if country['id'] in marea_countries:
+						marea_countries[country['id']]['people'][actor['id']] = actor
 
 front_stats.append("<p>MarEA Sites</p><h2>" + str(len(marea_sites)) + "</h2>")
 front_stats.append("<p>MarEA Grids</p><h2>" + str(len(marea_grids)) + "</h2>")
@@ -118,14 +137,46 @@ with open(output_file, 'w') as fp:
 
 	fp.write(map_html + '\n\n')
 
+	fp.write("## Site Documentation\n\n")
+
 	if len(front_stats) > 0:
-		fp.write("## Site Documentation\n\n")
 		fp.write("<div class=\"grid grid-cols-4\">\n")
 		for card in front_stats:
 			fp.write("<div class=\"card\">" + card + "</div>\n")
 		fp.write("</div>\n\n")
 
+	fp.write("| Grid Square | Sites       | Researchers  |\n")
+	fp.write("|-------------|-------------|--------------|\n")
+	total = 0
+	for grid in sorted(marea_grids.values(), reverse=True, key=lambda x: len(x['sites'])):
+		fp.write('| ' + (' | '.join([grid['label'], str(len(grid['sites'])), (', '.join([str(x['label']) for x in grid['people'].values()]))])) + ' |\n')
+		total = total + len(grid['sites'])
+	fp.write('| ' + (' | '.join(['TOTAL', str(total), ''])) + ' |\n')
+	fp.write("\n")
+
+# {"id": "c4e8738c-c3a5-4aba-a3f5-31f3890150e0", "label": "E34N31-32", "disturbances": {"Clearance (Bulldozing/Levelling)": 1}, "people": {"77fef06f-3a14-4bdb-8a0a-59cddb4ff35b": {"id": "77fef06f-3a14-4bdb-8a0a-59cddb4ff35b", "label": "Mohammad Jaradat"}, "60097680-0c07-4f91-a076-7a30b390e60f": {"id": "60097680-0c07-4f91-a076-7a30b390e60f", "label": "Georgia Andreou"}, "90ae76cf-865d-4e68-971c-c2b2af9be18c": {"id": "90ae76cf-865d-4e68-971c-c2b2af9be18c", "label": "Michael Fradley"}}}
+
 	fp.write("## Threat Analysis\n\n")
+
+	for countryid, country in marea_countries.items():
+
+		if len(country['disturbances']) == 0:
+			continue
+
+		fp.write("### " + country['label'] + "\n\n")
+		fp.write((', '.join([x['label'] for x in country['people'].values()])) + '\n\n')
+
+		fp.write("#### Threats \n\n")
+		fp.write("```mermaid\n")
+		fp.write("gantt")
+		fp.write("  todayMarker off\n")
+		fp.write("  dateFormat X\n")
+		fp.write("  axisFormat %\n")
+		fp.write("\n")
+		for d, f in country['disturbances'].items():
+			fp.write("  " + str(d) + " (" + str(f) + ") : 0, " + str(f) + "\n")
+		fp.write("```\n\n")
+
 
 # {"Actor": {"id": "780a6fe2-4ab2-4fa5-98d9-8f52d51d9335", "label": "Nichole Sheldrick"},
 #  "AddedToDatabase": "2023-05-02",
