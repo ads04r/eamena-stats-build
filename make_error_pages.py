@@ -30,14 +30,15 @@ with open(geo_matches_file, 'r') as fp:
 	for row in r:
 		site_id = row.pop(0)
 		geo_stats[site_id] = row
-with open(bodges_file, 'r') as fp:
-	r = csv.reader(fp, delimiter=',', quotechar='"')
-	for row in r:
-		site_id = row[0]
-		if not '-' in site_id:
-			continue
-		tiles = int(row[1])
-		bodges[site_id] = tiles
+if os.path.exists(bodges_file):
+	with open(bodges_file, 'r') as fp:
+		r = csv.reader(fp, delimiter=',', quotechar='"')
+		for row in r:
+			site_id = row[0]
+			if not '-' in site_id:
+				continue
+			tiles = int(row[1])
+			bodges[site_id] = tiles
 
 with open(grid_file, 'r') as fp:
 	for sites in json.load(fp).values():
