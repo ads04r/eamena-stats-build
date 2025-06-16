@@ -11,8 +11,7 @@ summary_file = os.path.join(data_path, 'summary.json')
 disturbances_file = os.path.join(data_path, 'disturbances.json')
 marea_uuid = '270e5b36-4d18-4b6e-a7ee-c49e3d301620'
 
-#output_file = os.path.join(docs_path, 'marea.md')
-output_file = os.path.join(base_path, 'marea-dev.md')
+output_file = os.path.join(docs_path, 'marea.md')
 
 headers = """
 <style>
