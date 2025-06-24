@@ -27,6 +27,43 @@ headers = """
 </style>
 """
 map_html = "<div class=\"card\">\n\n![Progress map](map.png)\n\n</div>"
+disturbance_graph = """
+<div class="card">${
+    resize((width) => Plot.plot({
+        label: "Disturbance Causes",
+        marginLeft: 250,
+        marginRight: 30,
+        width: width,
+        x: { axis: null },
+        y: { axis: null },
+        marks: [
+                Plot.barX(%%%, {
+                        x: "records",
+                        y: "label",
+                        color: { legend: false },
+                        fill: "label",
+                        sort: { y: "x", reverse: true }
+                }),
+                Plot.text(%%%, {
+                        text: d => `${ d.records }`,
+                        x: "records",
+                        y: "label",
+                        textAnchor: "start",
+                        dx: 3,
+                        fill: "white"
+                }),
+                Plot.text(%%%, {
+                        text: d => d.label,
+                        textAnchor: "end",
+                        x: 0,
+                        y: "label",
+                        dx: -3,
+                        fill: "white"
+                })
+        ]
+    }))
+  }</div>
+"""
 marea_sites_total = {}
 marea_grids_total = {}
 marea_sites = {}
@@ -238,31 +275,12 @@ with open(output_file, 'w') as fp:
 
 # {"id": "4be2c4ce-df4a-4f9d-92e4-7f88c6fa6753", "label": "Egypt", "disturbances": {"Occupation/Continued Use": 1, "Construction": 1, "Clearance (Bulldozing/Levelling)": 1, "Water and/or Wind Action": 1}, "people": {"351b56f1-628c-429c-bbcd-3deec068423c": {"id": "351b56f1-628c-429c-bbcd-3deec068423c", "label": "Julia Nikolaus"}, "c278483d-0c2f-435d-b0b8-bfd1ced3c76c": {"id": "c278483d-0c2f-435d-b0b8-bfd1ced3c76c", "label": "Mohamed Osman"}, "4764f6bd-bc2b-4a60-b095-114fed6158e2": {"id": "4764f6bd-bc2b-4a60-b095-114fed6158e2", "label": "Mohamed Kenawi"}, "89e3c852-f4a4-4372-b5fc-1f13e6667fe8": {"id": "89e3c852-f4a4-4372-b5fc-1f13e6667fe8", "label": "Mohamed Ashmawy"}}, "sites": ["
 
-		fp.write("### " + country['label'] + "\n\n")
+		fp.write("\n\n### " + country['label'] + "\n\n")
 		fp.write('Based on reports of ' + str(len(country['sites'])) + ' sites by ' + (', '.join([x['label'] for x in country['people'].values()])) + '\n\n')
 
-		fp.write("#### Threats \n\n")
-		fp.write("```mermaid\n")
-
-		x = []
-		y = []
-		config = {'config': {'theme': 'dark', 'xyChart': {'showDataLabel': True, 'plotReservedSpacePercent': 90}}}
+		fp.write("#### Disturbance Causes \n\n")
+		country_data = []
 		for d, f in country['disturbances'].items():
-			y.append(d)
-			x.append(f)
-		fp.write('---\n' + yaml.dump(config) + '---\n')
-		fp.write("xychart-beta\n")
-		fp.write("  x-axis " + json.dumps(y) + "\n")
-		fp.write("  y-axis \"Number identified\"\n")
-		fp.write("  bar " + json.dumps(x) + "\n")
-		fp.write("\n")
-		fp.write("```\n\n")
+			country_data.append({'label': str(d), 'records': f})
+		fp.write(disturbance_graph.replace('%%%', json.dumps(sorted(country_data, reverse=True, key=lambda x: x['records']))))
 
-#		fp.write("gantt")
-#		fp.write("  todayMarker off\n")
-#		fp.write("  dateFormat X\n")
-#		fp.write("  axisFormat %\n")
-#		fp.write("\n")
-#		for d, f in country['disturbances'].items():
-#			fp.write("  " + str(d) + " (" + str(f) + ") : 0, " + str(f) + "\n")
-#		fp.write("```\n\n")
