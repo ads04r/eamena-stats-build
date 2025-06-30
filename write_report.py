@@ -128,45 +128,6 @@ with open(summary_file, 'r') as fp:
 
 for item in marea_sites.values():
 
-#   "EAMENA-0000505" : {
-#      "Actor" : [
-#         {
-#            "id" : "351b56f1-628c-429c-bbcd-3deec068423c",
-#            "label" : "Julia Nikolaus"
-#         },
-#         {
-#            "id" : "780a6fe2-4ab2-4fa5-98d9-8f52d51d9335",
-#            "label" : "Nichole Sheldrick"
-#         }
-#      ],
-#      "AddedToDatabase" : "2023-05-01",
-#      "Country" : {
-#         "id" : "049dda8d-9fd3-49a9-b31d-de825de40951",
-#         "label" : "Libya"
-#      },
-#      "Date" : [
-#         "2016-12-02",
-#         "2024-08-22"
-#      ],
-#      "Disturbances" : [],
-#      "Grid" : {
-#         "id" : "dc39428a-6c93-4ebf-bb41-b3cf92de1f16",
-#         "label" : "E13N25-44"
-#      },
-#      "ID" : "EAMENA-0000505",
-#      "Role" : [
-#         {
-#            "id" : "270e5b36-4d18-4b6e-a7ee-c49e3d301620",
-#            "label" : "MarEA Project Staff"
-#         },
-#         {
-#            "id" : "20b1a4e0-97e1-41f7-b519-124a7317266b",
-#            "label" : "EAMENA Project Staff"
-#         }
-#      ],
-#      "UUID" : "736f93ae-0a90-4e26-b7c1-b224a0f8a615"
-#   }
-
 	disturbances = []
 	actors = []
 	site_id = item['UUID']
@@ -183,9 +144,13 @@ for item in marea_sites.values():
 		country_id = item['Country']['id']
 		country_label = item['Country']['label']
 		if not country_id in marea_countries:
-			marea_countries[country_id] = {'id': country_id, 'label': country_label, 'disturbances': {}, 'people': {}, 'sites': {}}
+			marea_countries[country_id] = {'id': country_id, 'label': country_label, 'disturbances': {}, 'people': {}, 'grids': [], 'sites': {}}
 		if not site_id in marea_countries[country_id]['sites']:
 			marea_countries[country_id]['sites'][site_id] = site_label
+		if 'Grid' in item:
+			grid_id = item['Grid']['label']
+			if not grid_id in marea_countries[country_id]['grids']:
+				marea_countries[country_id]['grids'].append(grid_id)
 		for actor in actors:
 			actor_id = actor['id']
 			if not actor_id in marea_countries[country_id]['people']:
@@ -194,7 +159,6 @@ for item in marea_sites.values():
 			if not d in marea_countries[country_id]['disturbances']:
 				marea_countries[country_id]['disturbances'][d] = 0
 			marea_countries[country_id]['disturbances'][d] = marea_countries[country_id]['disturbances'][d] + 1
-
 
 	if 'Grid' in item:
 		grid_id = item['Grid']['id']
@@ -256,16 +220,6 @@ with open(output_file, 'w') as fp:
 	for grid in sorted(marea_grids.values(), reverse=True, key=lambda x: len(x['sites'])):
 		total = total + len(grid['sites'])
 
-# {"id": "c4e8738c-c3a5-4aba-a3f5-31f3890150e0",
-#  "label": "E34N31-32",
-#  "disturbances": {"Clearance (Bulldozing/Levelling)": 1},
-#  "people": {
-#      "77fef06f-3a14-4bdb-8a0a-59cddb4ff35b": {"id": "77fef06f-3a14-4bdb-8a0a-59cddb4ff35b", "label": "Mohammad Jaradat"},
-#      "60097680-0c07-4f91-a076-7a30b390e60f": {"id": "60097680-0c07-4f91-a076-7a30b390e60f", "label": "Georgia Andreou"},
-#      "90ae76cf-865d-4e68-971c-c2b2af9be18c": {"id": "90ae76cf-865d-4e68-971c-c2b2af9be18c", "label": "Michael Fradley"}
-#  }
-# }
-
 	fp.write("## Disturbance Cause Analysis\n\n")
 
 	for countryid, country in marea_countries.items():
@@ -273,10 +227,8 @@ with open(output_file, 'w') as fp:
 		if len(country['disturbances']) == 0:
 			continue
 
-# {"id": "4be2c4ce-df4a-4f9d-92e4-7f88c6fa6753", "label": "Egypt", "disturbances": {"Occupation/Continued Use": 1, "Construction": 1, "Clearance (Bulldozing/Levelling)": 1, "Water and/or Wind Action": 1}, "people": {"351b56f1-628c-429c-bbcd-3deec068423c": {"id": "351b56f1-628c-429c-bbcd-3deec068423c", "label": "Julia Nikolaus"}, "c278483d-0c2f-435d-b0b8-bfd1ced3c76c": {"id": "c278483d-0c2f-435d-b0b8-bfd1ced3c76c", "label": "Mohamed Osman"}, "4764f6bd-bc2b-4a60-b095-114fed6158e2": {"id": "4764f6bd-bc2b-4a60-b095-114fed6158e2", "label": "Mohamed Kenawi"}, "89e3c852-f4a4-4372-b5fc-1f13e6667fe8": {"id": "89e3c852-f4a4-4372-b5fc-1f13e6667fe8", "label": "Mohamed Ashmawy"}}, "sites": ["
-
 		fp.write("\n\n### " + country['label'] + "\n\n")
-		fp.write('Based on reports of ' + str(len(country['sites'])) + ' sites by ' + (', '.join([x['label'] for x in country['people'].values()])) + '\n\n')
+		fp.write('Based on reports of ' + str(len(country['sites'])) + ' sites, in ' + str(len(country['grids'])) + ' grids, by ' + (', '.join([x['label'] for x in country['people'].values()])) + '\n\n')
 
 		fp.write("#### Disturbance Causes \n\n")
 		country_data = []
