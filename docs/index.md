@@ -97,7 +97,7 @@ toc: false
 const years = await FileAttachment("data/years.json").json();
 const roles = await FileAttachment("data/combine.json").json();
 const countries = await FileAttachment("data/countries.json").json();
-const grid_data = FileAttachment("data/grid_data.json").json();
+const grid_data = FileAttachment("data/grid_data_trimmed.json").json();
 const role_sel = view(
 	Inputs.select(roles, {
 		label: "Role",
