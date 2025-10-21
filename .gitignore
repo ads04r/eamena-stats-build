@@ -1,6 +1,7 @@
 .DS_Store
 dist/
 docs/.observablehq/cache/
+docs/marea.md
 node_modules/
 yarn-error.log
 docs/*.png
