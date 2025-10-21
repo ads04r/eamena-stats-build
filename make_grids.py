@@ -59,20 +59,3 @@ for gridk in grid_data.keys():
 		fp.write(template.replace("%%%", grid_id))
 	with open(os.path.join(data_path, 'grids', grid_id + '.json'), 'w') as fp:
 		fp.write(json.dumps(ret))
-
-#    "38e6731d-7e36-41e4-8155-3e453cc5d79a": {
-#        "resourceinstanceid": "38e6731d-7e36-41e4-8155-3e453cc5d79a",
-#        "data": {
-#            "Disturbance Cause Certainty": [
-#                "High"
-#            ],
-#            "Disturbance Date From": [],
-#            "Disturbance Cause Type": [
-#                "Wind Action"
-#            ],
-#            "Disturbance Date To": []
-#        },
-#        "disturbances": [
-#            "Wind Action"
-#        ]
-#    }
