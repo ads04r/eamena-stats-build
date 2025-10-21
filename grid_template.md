@@ -71,12 +71,13 @@ function role_expand(role)
 }
 
 const site_sel = view(Inputs.table(grid_data['sites'], {
-        columns: ['Label', 'Role', 'Date', 'Tiles', 'ID'],
-        header: {'Label': 'EAMENA ID', 'Date': 'Assessment Date(s)', 'Tiles': 'Assessments', 'ID': ''},
+        columns: ['Label', 'Role', 'Date', 'MissingFields', 'Tiles', 'ID'],
+        header: {'Label': 'EAMENA ID', 'Date': 'Assessment Date(s)', 'Tiles': 'Assessments', 'ID': '', 'MissingFields': 'Missing'},
         format: {
                 'ID': (x) => htl.html`<a href="https://database.eamena.org/report/${ x }">EAMENA Link</a>`,
                 'Role': (x) => htl.html`${ role_expand(x) }`,
 		'Tiles': (x) => htl.html`${ x.length }`,
+		'MissingFields': (x) => htl.html`${ x.length }`,
         },
   }));
 
