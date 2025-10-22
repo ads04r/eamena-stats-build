@@ -16,4 +16,5 @@ docs/data/empty.csv
 docs/data/missing-geometries.csv
 docs/E*.md
 docs/W*.md
-build.sh
+build*
+docs/e??n??-??.md
