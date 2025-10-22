@@ -70,14 +70,20 @@ function role_expand(role)
 	return role.label;
 }
 
+function mds(value)
+{
+	if(value == 0) { return htl.html`<span style="color: green;">&#10004</span>`; }
+	return htl.html`<span style="color: red;">&#10006</span>`;
+}
+
 const site_sel = view(Inputs.table(grid_data['sites'], {
         columns: ['Label', 'Role', 'Date', 'MissingFields', 'Tiles', 'ID'],
-        header: {'Label': 'EAMENA ID', 'Date': 'Assessment Date(s)', 'Tiles': 'Assessments', 'ID': '', 'MissingFields': 'Missing'},
+        header: {'Label': 'EAMENA ID', 'Date': 'Assessment Date(s)', 'Tiles': 'Assessments', 'ID': '', 'MissingFields': 'MDS'},
         format: {
                 'ID': (x) => htl.html`<a href="https://database.eamena.org/report/${ x }">EAMENA Link</a>`,
                 'Role': (x) => htl.html`${ role_expand(x) }`,
 		'Tiles': (x) => htl.html`${ x.length }`,
-		'MissingFields': (x) => htl.html`${ x.length }`,
+		'MissingFields': (x) => mds(x.length),
         },
   }));
 
