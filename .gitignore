@@ -14,6 +14,7 @@ docs/data/grid_matches.csv
 docs/data/errors.csv
 docs/data/empty.csv
 docs/data/missing-geometries.csv
+docs/data/years.json
 docs/E*.md
 docs/W*.md
 build*
