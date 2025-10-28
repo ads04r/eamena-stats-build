@@ -11,7 +11,7 @@ for grid_id in grid_data.keys():
 	c = len(grid_data[grid_id])
 	for i in range(0, c):
 		keys = list(grid_data[grid_id][i].keys())
-		for k in ['ID', 'Label', 'Role', 'Date']:
+		for k in ['ID', 'Label', 'Role', 'Date', 'MissingFields']:
 			if k in keys:
 				keys.remove(k)
 		for k in keys:
