@@ -19,3 +19,5 @@ docs/E*.md
 docs/W*.md
 build*
 docs/e??n??-??.md
+docs/data/people/*.csv
+.vscode
