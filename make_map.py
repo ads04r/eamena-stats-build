@@ -21,8 +21,9 @@ for grid_key in data.keys():
 
 	grid_id = str(grid_key)
 	item = data[grid_id]
-	if not 'MarEA' in json.dumps(item):
-		continue
+	fill_colour = '#CFCF7F'
+	if 'MarEA' in json.dumps(item):
+		fill_colour = '#007F00'
 	if not grid_id in geometries:
 		continue
 	geom = geometries[grid_id]
@@ -32,7 +33,7 @@ for grid_key in data.keys():
 	except:
 		coordinates = []
 
-	polygon = Polygon(coords=coordinates, fill_color='#007F00', outline_color='#000000', simplify=False)
+	polygon = Polygon(coords=coordinates, fill_color=fill_colour, outline_color='#000000', simplify=False)
 	m.add_polygon(polygon)
 
 image = m.render(zoom=5)
