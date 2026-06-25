@@ -10,6 +10,7 @@ data_path = os.path.join(docs_path, 'data')
 summary_file = os.path.join(data_path, 'summary.json')
 disturbances_file = os.path.join(data_path, 'disturbances.json')
 marea_uuid = '270e5b36-4d18-4b6e-a7ee-c49e3d301620'
+map_filename = "map_{}.png".format(datetime.datetime.now().strftime("%Y%m%d"))
 
 output_file = os.path.join(docs_path, 'marea.md')
 
@@ -26,7 +27,7 @@ headers = """
 }
 </style>
 """
-map_html = "<div class=\"card\">\n\n![Progress map](map.png)\n\n</div>"
+map_html = "<div class=\"card\">\n\n![Progress map](" + map_filename + ")\n\n</div>"
 disturbance_graph = """
 <div class="card">${
     resize((width) => Plot.plot({
